@@ -22,8 +22,8 @@ function adjustSizeGen(){
             avaiw = $('#game-page').width(),
             h = Math.max(avaih - 7, avaih * 0.98),
             w = Math.max(avaiw - 7, avaih * 0.98),
-            vspace = Math.min(h - 150, w),
-            hspace = Math.min(w - 320, h - 40),
+            vspace = Math.min(h, w),
+            hspace = Math.min(w, h - 40),
             hsize;
 
         if(smallScreen){
@@ -40,15 +40,15 @@ function adjustSizeGen(){
             hsize = Math.min(~~((vspace - 15) / 15 / 2), ~~((avaiw - 22) / 15 / 2));
             gameRegion.css({
                 'padding': hsize+6,
-                'margin-left': -((2*hsize+1)*15+12)/2,
-                'padding-top': 100+hsize,
-                'padding-bottom': 50+hsize,
-                'margin-top':  -(15 * hsize + 82)
+                // 'margin-left': -((2*hsize+1)*15+12)/2,
+                // 'padding-top': 100+hsize,
+                // 'padding-bottom': 50+hsize,
+                // 'margin-top':  -(15 * hsize + 82)
             });
             tds.css('padding',hsize);
             board.css({
-                'top': 100,
-                'bottom': 50,
+                // 'top': 100,
+                // 'bottom': 50,
                 'left': 6,
                 'right': 6
             });
@@ -71,17 +71,17 @@ function adjustSizeGen(){
             hsize = ~~((hspace - 15) / 15 / 2);
             gameRegion.css({
                 'padding': hsize+6,
-                'margin-left': -((2*hsize+1)*15+320)/2,
+                'margin-left': -((2*hsize+1)*15)/2,
                 'padding-left': 160+hsize,
                 'padding-right': 160+hsize,
-                'padding-top': 36+hsize,
+                // 'padding-top': 36+hsize,
                 'margin-top': -(hsize * 15 + 28)
             });
             tds.css('padding',hsize);
             board.css({
-                'top': 36,
+                // 'top': 36,
                 'bottom': 6,
-                'left': 160,
+                // 'left': 160,
                 'right': 160
             });
             gameHeader.css('line-height', 36+hsize+'px');

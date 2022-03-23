@@ -262,8 +262,8 @@ table.board {
 	position: absolute;
 	padding: 24px;
 	border-radius: 7px;
-	left: 50%;
-	top: 50%;
+	/* left: 50%;
+	top: 50%; */
 }
 
 .go-board {
@@ -450,8 +450,7 @@ table.board {
 .header .container .logo img {
 	border: none;
 }
-.header .container .nav ul, 
-.header .container .nav li {
+ul, li {
 	list-style: none;
 	padding: 0;
 	margin: 0;
@@ -483,16 +482,48 @@ table.board {
 .game-wrapper {
 	display: flex;
 	justify-content: space-between;
+	border-bottom: 1px solid #E5EBF2;
 }
 .game-wrapper #game-page {
 	width: 66%;
-	min-height: 616px;
+	min-height: 916px;
 }
 .game-wrapper #game-setting {
-	width: 31%;
+	width: 33%;
 }
 .ui-body-c, .ui-overlay-c {
 	background: none;
 	text-shadow: unset;
 	border: none;
+}
+
+/* page content */
+.page-content h3, 
+.page-content p {
+	color: #344861;
+}
+.page-content h3 {
+	font-size: 28px;
+	margin-top: 6rem;
+	margin-bottom: 2rem;
+}
+.page-content p {
+	font-size: 14px;
+	line-height: 22px;
+}
+.page-content .desc {
+	background: #F3F6FA;
+	margin-top: 4rem;
+	margin-bottom: 6rem;
+	padding: 1rem 2rem;
+}
+.page-content .desc li {
+	list-style-type: disc;
+	color: #344861;
+	font-size: 14px;
+	line-height: 22px;
+	margin: 10px 0 10px 2rem;
+}
+.page-content .desc li::marker {
+	font-size: 20px;
 }

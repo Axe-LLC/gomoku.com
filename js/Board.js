@@ -64,9 +64,9 @@ Place.prototype.unwarns = function(){
 
 var Board = function(boardElm, backgroundElm){
     var frag = document.createDocumentFragment();
-    for(var i = 0; i < 14; i++){
+    for(var i = 1; i < 15; i++){
         var row = document.createElement("tr");
-        for(var j = 0; j < 14; j++){
+        for(var j = 1; j < 15; j++){
             row.appendChild(document.createElement("td"));
         }
         frag.appendChild(row);
