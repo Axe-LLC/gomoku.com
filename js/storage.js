@@ -1,5 +1,5 @@
 gameData={
-    prefix: 'yyjhao.gomoku.',
+    prefix: 'axe.gomoku.',
     records: {},
     addRecord: function(name, defaultVal,applyFunc){
         this.records[name]=defaultVal;

@@ -62,8 +62,8 @@ $(document).ready(function(){
     $('#new-game').page();
     $('#game-won').page();
     gameData.load();
-    $('.back-to-game').button('disable');
-    $.mobile.changePage('#new-game',{changeHash: false});
+    // $('.back-to-game').button('disable');
+    // $.mobile.changePage('#new-game',{changeHash: false});
 
     window.gameInfo = (function(){
         var blinking = false,

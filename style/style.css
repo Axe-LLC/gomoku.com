@@ -110,13 +110,7 @@
 
 body {
 	font-family: Helvetica,Arial,sans-serif;
-	background: url(woodfloor.jpg);
-
-	background: -webkit-radial-gradient(center, ellipse cover, rgba(0,0,0,0) 35%, rgba(0,0,0,0.9) 100%), url(woodfloor.jpg);
-	background: -moz-radial-gradient(center, ellipse cover, rgba(0,0,0,0) 35%, rgba(0,0,0,0.9) 100%), url(woodfloor.jpg);
-	background: -o-radial-gradient(center, ellipse cover, rgba(0,0,0,0) 35%, rgba(0,0,0,0.9) 100%), url(woodfloor.jpg);
-	background: -ms-radial-gradient(center, ellipse cover, rgba(0,0,0,0) 35%, rgba(0,0,0,0.9) 100%), url(woodfloor.jpg);
-	background: radial-gradient(center, ellipse cover, rgba(0,0,0,0) 35%, rgba(0,0,0,0.9) 100%), url(woodfloor.jpg);
+	background: white;
 }
 
 .no-background {
@@ -141,6 +135,7 @@ body {
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
+	position: relative;
 }
 
 .screen-center {
@@ -267,7 +262,6 @@ table.board {
 	position: absolute;
 	padding: 24px;
 	border-radius: 7px;
-	background: url('wood.jpg');
 
 	-webkit-box-shadow: inset 0 0 3px white, 0 0 10px black;
 	box-shadow: inset 0 0 3px white, 0 0 10px black;
@@ -439,4 +433,51 @@ table.board {
 	-ms-animation-direction: alternate;
 	-o-animation-direction: alternate;
 	animation-direction: alternate;
+}
+
+/* header */
+.header .container {
+	display: flex;
+	justify-content: space-between;
+}
+.header .container::before,
+.header .container::after {
+	display: none;
+}
+.header .container .logo {
+	text-decoration: none;
+	margin-top: 18px;
+	margin-bottom: 18px;
+	padding: 5px 0;
+}
+.header .container .logo img {
+	border: none;
+}
+.header .container .nav ul, 
+.header .container .nav li {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.header .container .nav li {
+	display: inline-block;
+	margin-left: 20px;
+	margin-top: 24px;
+}
+.header .container .nav li a {
+	text-decoration: none;
+	color: #344861;
+	font-size: 14px;
+}
+/* Controller */
+.controller {
+	background: #F7FAFF;
+	border-top: 1px solid #E5EBF2;
+	height: 77px;
+	display: flex;
+	align-items: center;
+}
+.controller .container {
+	display: flex;
+	justify-content: space-between;
 }
