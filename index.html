@@ -14,7 +14,7 @@
 
 	<title>Gomoku</title>
 
-	<!-- <link rel="stylesheet" href="style/jquery.mobile-1.2.0.min.css" /> -->
+	<link rel="stylesheet" href="style/jquery.mobile-1.2.0.min.css" />
 	<script src="js/jquery-1.8.2.min.js"></script>
 	<script src="js/jquery.mobile-1.2.0.min.js"></script>
 
@@ -36,61 +36,63 @@
 <div class='fullscreen-wrapper' id='sad-outer'>
 	<img src='images/sad.png' class='sad-face screen-center'>
 </div> -->
-
-<!-- Header section -->
-<div class="header">
-	<div class="container">
-		<a href="/" title="Gomoku.com" class="logo">
-			<img src="images/logo.svg" />
-		</a>
-		<div class="nav">
-			<ul>
-				<li><a href="/">How to Play</a></li>
-				<li><a href="/">Tips to Win</a></li>
-				<li><a href="/">Leaderboard</a></li>
-			</ul>
-		</div>
-	</div>
-</div>
-<!-- Header section end -->
-
-<!-- Control section -->
-<div class="controller">
-	<div class="container">
-		123
-	</div>
-</div>
-<!-- Control section end -->
-
-<div class="container">
-	<div data-role='page' id='game-page' class='no-background'>
-		<div data-role='content' class='center no-padding'>
-			<div id='game-region'>
-				<header class='game-ult'>Gomoku</header>
-				<div id='game-info' class='game-ult ui-bar ui-bar-e'>
-					<span class='go black'></span>
-					<span class='cont'>Your turn.</span>
-				</div>
-				<div id='main-but-group' class='game-ult'>
-					<a href='#new-game' data-rel='dialog' data-role='button' data-icon="grid">New Game</a>
-					<a href='#' id='undo-button' data-icon="back"  data-role='button' >Undo</a>
-				</div>
-				<div id='other-but-group' class='game-ult'>
-					<a href='#help-page' id='help-button' data-icon="star" data-role='button'>About</a>
-				</div>
-				<div class='go-board' data-enhance=false>
-					
-				</div>
-				<table class='board' data-enhance=false>
-					<tbody>
-						
-					</tbody>
-				</table>
+<div data-role="page">
+	<!-- Header section -->
+	<div class="header">
+		<div class="container">
+			<a href="/" title="Gomoku.com" class="logo">
+				<img src="images/logo.svg" />
+			</a>
+			<div class="nav">
+				<ul>
+					<li><a href="/">How to Play</a></li>
+					<li><a href="/">Tips to Win</a></li>
+					<li><a href="/">Leaderboard</a></li>
+				</ul>
 			</div>
 		</div>
 	</div>
+	<!-- Header section end -->
+
+	<!-- Control section -->
+	<div class="controller">
+		<div class="container">
+			123
+		</div>
+	</div>
+	<!-- Control section end -->
+
+	<div class="container game-wrapper" data-role="content">
+		<div id='game-page' class='no-background'>
+			<div class='center no-padding'>
+				<div id='game-region'>
+					<!-- <header class='game-ult'>Gomoku</header>
+					<div id='game-info' class='game-ult ui-bar ui-bar-e'>
+						<span class='go black'></span>
+						<span class='cont'>Your turn.</span>
+					</div>
+					<div id='main-but-group' class='game-ult'>
+						<a href='#new-game' data-rel='dialog' data-role='button' data-icon="grid">New Game</a>
+						<a href='#' id='undo-button' data-icon="back"  data-role='button' >Undo</a>
+					</div>
+					<div id='other-but-group' class='game-ult'>
+						<a href='#help-page' id='help-button' data-icon="star" data-role='button'>About</a>
+					</div> -->
+					<div class='go-board' data-enhance=false>
+						
+					</div>
+					<table class='board' data-enhance=false>
+						<tbody>
+							
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<div id="game-setting">Game setting</div>
+	</div>
 </div>
-<div id='game-won' data-theme='e' data-role='dialog'>
+<!-- <div id='game-won' data-theme='e' data-role='dialog'>
 	<div data-role='header'>
 		<h4>You Win!</h4>
 	</div>
@@ -159,6 +161,6 @@
 		<p>I am Yujian and I made this game for fun. You can check out <a href='http://yjyao.com'>my website</a> for my other lame projects, or find out more about me. You can also read a bit more about this game <a href="http://yjyao.com/2012/06/gomoku-in-html5.html">here</a>. Or, install this game in Chrome and/or post your comments <a href="https://chrome.google.com/webstore/detail/ngbpiahelilpgbnonpjfaoegaigopepa">here</a>.</p>
 		<p>Also, have fun beating/get beaten by my AI!</p>
 	</div>
-</div>
+</div> -->
 </body>
 </html>

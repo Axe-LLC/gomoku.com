@@ -10,8 +10,16 @@ function adjustSizeGen(){
         otherButs = $('#other-but-group');
 
     return function(){
-        var avaih = window.innerHeight,
-            avaiw = window.innerWidth,
+        // var avaih = window.innerHeight,
+        //     avaiw = window.innerWidth,
+        //     h = Math.max(avaih - 7, avaih * 0.98),
+        //     w = Math.max(avaiw - 7, avaih * 0.98),
+        //     vspace = Math.min(h - 150, w),
+        //     hspace = Math.min(w - 320, h - 40),
+        //     hsize;
+
+        var avaih = $('#game-page').height(),
+            avaiw = $('#game-page').width(),
             h = Math.max(avaih - 7, avaih * 0.98),
             w = Math.max(avaiw - 7, avaih * 0.98),
             vspace = Math.min(h - 150, w),
