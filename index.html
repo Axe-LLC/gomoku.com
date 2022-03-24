@@ -91,6 +91,7 @@
 				</div>
 			</div>
 		</div>
+		<!-- Game setting -->
 		<div id="game-setting">
 			<h4>Play against</h4>
 			<div class="btn-group" id="mode-select">
@@ -116,25 +117,46 @@
 			</div>
 			<h4>Board Size</h4>
 			<div class="btn-group" id="mode-boardsize">
-				<input type="radio" id="selSize1" name="selSize" value="player1" checked />
+				<input type="radio" id="selSize1" name="selSize" value="9" checked />
 				<label for="selSize1" class="selected">
 					9 by 9
 				</label>
-				<input type="radio" id="selSize2" name="selSize" value="player2" />
+				<input type="radio" id="selSize2" name="selSize" value="13" />
 				<label for="selSize2">
 					13 by 13
 				</label>
-				<input type="radio" id="selSize3" name="selSize" value="player1" checked />
-				<label for="selSize3" class="selected">
+				<input type="radio" id="selSize3" name="selSize" value="15" checked />
+				<label for="selSize3">
 					15 by 15
 				</label>
-				<input type="radio" id="selSize4" name="selSize" value="player2" />
+				<input type="radio" id="selSize4" name="selSize" value="19" />
 				<label for="selSize4">
 					19 by 19
 				</label>
 			</div>
 			<h4>Board Theme</h4>
+			<div class="btn-group" id="mode-theme">
+				<input type="radio" id="selTheme1" name="selTheme" value="#FFFFFF" checked />
+				<label for="selTheme1" class="standard selected"></label>
+
+				<input type="radio" id="selTheme2" name="selTheme" value="#EFE4C8" checked />
+				<label for="selTheme2" class="classic"></label>
+				<input type="radio" id="selTheme3" name="selTheme" value="#8B745F" checked />
+				<label for="selTheme3" class="old"></label>
+				<input type="radio" id="selTheme4" name="selTheme" value="#C4D7EA" checked />
+				<label for="selTheme4" class="blue"></label>
+				<input type="radio" id="selTheme5" name="selTheme" value="#344861" checked />
+				<label for="selTheme5" class="dark"></label>
+			</div>
+
+			<div class="btn-group mb-0">
+				<button id="resetGame" class="reset-btn">Reset Selections</button>
+				<button id="startGame" class="start-btn">Start New Game</button>
+			</div>
 		</div>
+		<!-- Game setting end -->
+		<!-- Game advertise -->
+		<!-- Game advertise end -->
 	</div>
 	<!-- Game section end -->
 
