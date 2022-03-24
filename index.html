@@ -91,72 +91,94 @@
 				</div>
 			</div>
 		</div>
-		<!-- Game setting -->
-		<div id="game-setting">
-			<h4>Play against</h4>
-			<div class="btn-group" id="mode-select">
-				<input type="radio" id="selPlayer1" name="selPlayer" value="vs-computer" checked />
-				<label for="selPlayer1" class="selected">
-					<span id="pc-icon"></span>Computer
-				</label>
-				<input type="radio" id="selPlayer2" name="selPlayer" value="vshuman" />
-				<label for="selPlayer2">
-					<span id="user-icon"></span>Human
-				</label>
-			</div>
-			<h4>Play As</h4>
-			<div class="btn-group" id="mode-player">
-				<input type="radio" id="selOrder1" name="selOrder" value="player1" checked />
-				<label for="selOrder1" class="selected">
-					<span></span>Player1
-				</label>
-				<input type="radio" id="selOrder2" name="selOrder" value="player2" />
-				<label for="selOrder2">
-					<span></span>Player2
-				</label>
-			</div>
-			<h4>Board Size</h4>
-			<div class="btn-group" id="mode-boardsize">
-				<input type="radio" id="selSize1" name="selSize" value="9" checked />
-				<label for="selSize1" class="selected">
-					9 by 9
-				</label>
-				<input type="radio" id="selSize2" name="selSize" value="13" />
-				<label for="selSize2">
-					13 by 13
-				</label>
-				<input type="radio" id="selSize3" name="selSize" value="15" checked />
-				<label for="selSize3">
-					15 by 15
-				</label>
-				<input type="radio" id="selSize4" name="selSize" value="19" />
-				<label for="selSize4">
-					19 by 19
-				</label>
-			</div>
-			<h4>Board Theme</h4>
-			<div class="btn-group" id="mode-theme">
-				<input type="radio" id="selTheme1" name="selTheme" value="#FFFFFF" checked />
-				<label for="selTheme1" class="standard selected"></label>
+		<div class="game-sidebar">
+			<!-- Game setting -->
+			<div id="game-setting">
+				<h4>Play against</h4>
+				<div class="btn-group" id="mode-select">
+					<input type="radio" id="selPlayer1" name="selPlayer" value="vs-computer" checked />
+					<label for="selPlayer1" class="selected">
+						<span id="pc-icon"></span>Computer
+					</label>
+					<input type="radio" id="selPlayer2" name="selPlayer" value="vshuman" />
+					<label for="selPlayer2">
+						<span id="user-icon"></span>Human
+					</label>
+				</div>
+				<h4>Play As</h4>
+				<div class="btn-group" id="mode-player">
+					<input type="radio" id="selOrder1" name="selOrder" value="player1" checked />
+					<label for="selOrder1" class="selected">
+						<span></span>Player1
+					</label>
+					<input type="radio" id="selOrder2" name="selOrder" value="player2" />
+					<label for="selOrder2">
+						<span></span>Player2
+					</label>
+				</div>
+				<h4>Board Size</h4>
+				<div class="btn-group" id="mode-boardsize">
+					<input type="radio" id="selSize1" name="selSize" value="9" checked />
+					<label for="selSize1" class="selected">
+						9 by 9
+					</label>
+					<input type="radio" id="selSize2" name="selSize" value="13" />
+					<label for="selSize2">
+						13 by 13
+					</label>
+					<input type="radio" id="selSize3" name="selSize" value="15" checked />
+					<label for="selSize3">
+						15 by 15
+					</label>
+					<input type="radio" id="selSize4" name="selSize" value="19" />
+					<label for="selSize4">
+						19 by 19
+					</label>
+				</div>
+				<h4>Board Theme</h4>
+				<div class="btn-group" id="mode-theme">
+					<input type="radio" id="selTheme1" name="selTheme" value="#FFFFFF" checked />
+					<label for="selTheme1" class="standard selected"></label>
 
-				<input type="radio" id="selTheme2" name="selTheme" value="#EFE4C8" checked />
-				<label for="selTheme2" class="classic"></label>
-				<input type="radio" id="selTheme3" name="selTheme" value="#8B745F" checked />
-				<label for="selTheme3" class="old"></label>
-				<input type="radio" id="selTheme4" name="selTheme" value="#C4D7EA" checked />
-				<label for="selTheme4" class="blue"></label>
-				<input type="radio" id="selTheme5" name="selTheme" value="#344861" checked />
-				<label for="selTheme5" class="dark"></label>
-			</div>
+					<input type="radio" id="selTheme2" name="selTheme" value="#EFE4C8" checked />
+					<label for="selTheme2" class="classic"></label>
+					<input type="radio" id="selTheme3" name="selTheme" value="#8B745F" checked />
+					<label for="selTheme3" class="old"></label>
+					<input type="radio" id="selTheme4" name="selTheme" value="#C4D7EA" checked />
+					<label for="selTheme4" class="blue"></label>
+					<input type="radio" id="selTheme5" name="selTheme" value="#344861" checked />
+					<label for="selTheme5" class="dark"></label>
+				</div>
 
-			<div class="btn-group mb-0">
-				<button id="resetGame" class="reset-btn">Reset Selections</button>
-				<button id="startGame" class="start-btn">Start New Game</button>
+				<div class="btn-group mb-0">
+					<button id="resetGame" class="reset-btn">Reset Selections</button>
+					<button id="startGame" class="start-btn">Start New Game</button>
+				</div>
 			</div>
+			<!-- Game setting end -->
+			<hr />
+			<!-- Game advertise -->
+			<div class="coming-soon">
+				<div class="flex space-between">
+					<embed src="images/mobile-mark.svg" class="w-35"/>
+					<h5 class="w-60">
+						<strong>Coming Soon</strong><br /> 
+						Gomoku.com<br /> 
+						Mobile App
+					</h5>
+				</div>
+				<div class="flex space-between mt-25">
+					<a href="#this" title="App store" class="w-45">
+						<img src="images/appstore.svg" />
+					</a>
+					<a href="#this" title="Google Play" class="w-45">
+						<img src="images/googleplay.svg" />
+					</a>
+				</div>
+				<a href="#this" title="close" class="close">&#x2715;</a>
+			</div>
+			<!-- Game advertise end -->
 		</div>
-		<!-- Game setting end -->
-		<!-- Game advertise -->
-		<!-- Game advertise end -->
 	</div>
 	<!-- Game section end -->
 
@@ -202,7 +224,7 @@
 	<!-- page content end -->
 
 	<!-- privacy page -->
-	<div></div>
+	<div class="privacy"></div>
 	<!-- privacy page end -->
 </div>
 <!-- <div id='game-won' data-theme='e' data-role='dialog'>

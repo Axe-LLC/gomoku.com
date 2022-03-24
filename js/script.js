@@ -6,6 +6,10 @@ $(document).ready(function() {
         $(this).parent().find('label').removeClass('selected');
         $(this).addClass('selected');
     });
+
+    $(".coming-soon .close").on('click', function() {
+        $(".coming-soon").fadeOut();
+    });
 });
 
 $(window).resize(function() {
