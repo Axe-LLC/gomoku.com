@@ -262,6 +262,7 @@ table.board {
 	position: absolute;
 	padding: 24px;
 	border-radius: 7px;
+	border: 1px solid #344861;
 	/* left: 50%;
 	top: 50%; */
 }
@@ -475,6 +476,7 @@ ul, li {
 	height: 77px;
 	display: flex;
 	align-items: center;
+	margin-bottom: 30px;
 }
 .controller .container {
 	display: flex;
@@ -487,6 +489,7 @@ ul, li {
 	justify-content: space-between;
 	border-bottom: 1px solid #E5EBF2;
 	align-items: flex-start;
+	padding-bottom: 4rem;
 }
 .game-wrapper #game-page {
 	width: 66%;
