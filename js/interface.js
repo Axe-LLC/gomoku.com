@@ -6,8 +6,8 @@ $(document).ready(function(){
     $(window).resize(adjustSize);
 
     adjustSize();
-    $.mobile.defaultDialogTransition = 'flip';
-    $.mobile.defaultPageTransition = 'flip';
+    // $.mobile.defaultDialogTransition = 'flip';
+    // $.mobile.defaultPageTransition = 'flip';
     
     $('#mode-select input[type="radio"]').on('change', function(){
         gameData.mode=$(this).val();
@@ -22,7 +22,7 @@ $(document).ready(function(){
     });
     
     $('.back-to-game').on('tap',function(){
-        $.mobile.changePage('#game-page');
+        // $.mobile.changePage('#game-page');
     });
     
     $("#start-game").on('click',function(){
@@ -45,7 +45,7 @@ $(document).ready(function(){
             game.mode=gameData.level;
             game.init(new HumanPlayer(color), new AIPlayer(game.mode, other));
         }
-        $.mobile.changePage('#game-page');
+        // $.mobile.changePage('#game-page');
         game.start();
         setTimeout(function(){$('.back-to-game').button('enable');},100);
     });
@@ -59,8 +59,8 @@ $(document).ready(function(){
         $.mobile.changePage('#game-won');
     });
     
-    $('#new-game').page();
-    $('#game-won').page();
+    // $('#new-game').page();
+    // $('#game-won').page();
     gameData.load();
     // $('.back-to-game').button('disable');
     // $.mobile.changePage('#new-game',{changeHash: false});

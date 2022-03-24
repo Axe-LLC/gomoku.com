@@ -4,7 +4,7 @@ function adjustSizeGen(){
     var gameRegion = $("#game-region"),
         tds = $('.board td'),
         board = $('.go-board'),
-        gameHeader = $('header.game-ult'),
+        // gameHeader = $('header.game-ult'),
         gameInfo = $('#game-info'),
         mainButs = $('#main-but-group'),
         otherButs = $('#other-but-group');
@@ -52,7 +52,7 @@ function adjustSizeGen(){
                 'left': 6,
                 'right': 6
             });
-            gameHeader.css('line-height', 80+'px');
+            // gameHeader.css('line-height', 80+'px');
             gameInfo.css({
                 'top': 20,
                 'width': ((2*hsize+1)*15+12)/2-150
@@ -84,7 +84,7 @@ function adjustSizeGen(){
                 // 'left': 160,
                 'right': 160
             });
-            gameHeader.css('line-height', 36+hsize+'px');
+            // gameHeader.css('line-height', 36+hsize+'px');
             gameInfo.css({
                 'left': 15,
                 'top': 36+hsize,

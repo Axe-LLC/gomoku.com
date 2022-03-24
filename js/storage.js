@@ -36,18 +36,18 @@ gameData.addRecord('firstTime','firstTime');
 
 gameData.addRecord('mode', 'vscomputer', function(val){
     $('#mode-select input[value="'+val+'"]').attr('checked',true);
-    $('#mode-select input[type="radio"]').checkboxradio('refresh');
+    // $('#mode-select input[type="radio"]').checkboxradio('refresh');
     if(val=='vshuman'){
         $('.vs-computer').hide();
     }else $('.vs-computer').show();
 });
 gameData.addRecord('color', 'black', function(val){
     $('#color-select input[value="'+val+'"]').attr('checked',true);
-    $('#color-select input[type="radio"]').checkboxradio('refresh');
+    // $('#color-select input[type="radio"]').checkboxradio('refresh');
 });
 gameData.addRecord('level', 'medium', function(val){
     $('#level-select input[value="'+val+'"]').attr('checked',true);
-    $('#level-select input[type="radio"]').checkboxradio('refresh');
+    // $('#level-select input[type="radio"]').checkboxradio('refresh');
 });
 
 gameData.load=function(){

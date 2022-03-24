@@ -483,6 +483,7 @@ ul, li {
 	display: flex;
 	justify-content: space-between;
 	border-bottom: 1px solid #E5EBF2;
+	align-items: flex-start;
 }
 .game-wrapper #game-page {
 	width: 66%;
@@ -526,4 +527,70 @@ ul, li {
 }
 .page-content .desc li::marker {
 	font-size: 20px;
+}
+/* game setting */
+#game-setting {
+	padding: 20px;
+	background: #EAEEF4;
+	border-radius: 10px;
+}
+#game-setting h4 {
+	color: #344861;
+	font-size: 13px;
+	font-weight: bold;
+}
+#game-setting .btn-group input {
+	display: none;
+}
+#game-setting .btn-group {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 20px;
+}
+#game-setting .btn-group label {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	background: white;
+	border-radius: 4px;
+	border: 2px solid #EAEEF4;
+	width: 48%;
+	padding: 7px;
+	font-size: 10px;
+	color: #344861;
+	line-height: 12px;
+}
+#game-setting .btn-group label.selected {
+	border: 2px solid #0072E3;
+}
+#pc-icon {
+	width: 12px;
+	height: 12px;
+	margin-right: 5px;
+	margin-top: -1px;
+	background: url('images/ico-pc.svg') center center;
+}
+#game-setting .btn-group label.selected #pc-icon {
+	background: url('images/ico-pc-sel.svg') center center;
+}
+#user-icon {
+	width: 12px;
+	height: 12px;
+	margin-right: 7px;
+	margin-top: -1px;
+	background: url('images/ico-user.svg') center center;
+}
+#game-setting .btn-group label.selected #user-icon {
+	background: url('images/ico-user-sel.svg') center center;
+}
+#game-setting #mode-player span {
+	width: 12px;
+	height: 12px;
+	margin-right: 7px;
+	border-radius: 50%;
+	background: #344861;
+}
+#game-setting #mode-player label.selected span {
+	background: #0072E3;
 }
