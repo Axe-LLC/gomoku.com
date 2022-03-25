@@ -10,6 +10,13 @@ $(document).ready(function() {
     $(".coming-soon .close").on('click', function() {
         $(".coming-soon").fadeOut();
     });
+
+    $("#resetGame").on('click', function() {
+        $("#playerLabel").trigger('click');
+        $("#orderLabel").trigger('click');
+        $("#boardSizeLabel").trigger('click');
+        $("#themeLabel").trigger('click');
+    });
 });
 
 $(window).resize(function() {

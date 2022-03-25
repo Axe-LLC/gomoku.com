@@ -261,8 +261,8 @@ table.board {
 #game-region {
 	position: absolute;
 	padding: 24px;
-	border-radius: 7px;
-	border: 1px solid #344861;
+	border-radius: 10px;
+	border: 1px solid #EAEEF4;
 	/* left: 50%;
 	top: 50%; */
 }
@@ -496,7 +496,7 @@ ul, li {
 	min-height: 916px;
 }
 .game-wrapper .game-sidebar {
-	width: 33%;
+	width: 32%;
 }
 .ui-body-c, .ui-overlay-c {
 	background: none;
