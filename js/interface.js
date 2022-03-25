@@ -15,15 +15,22 @@ $(document).ready(function(){
     
     $('#mode-player input[type="radio"]').on('change', function(){
         gameData.color=$(this).val();
+        if( $(this).val() == 'black' ) {
+            $('#pc-icon').removeClass('blue');
+            $('#user-icon').removeClass('blue');
+        } else {
+            $('#pc-icon').addClass('blue');
+            $('#user-icon').addClass('blue');
+        }
     });
     
     $('#level-select input[type="radio"]').on('change', function(){
         gameData.level=$(this).val();
     });
     
-    $('.back-to-game').on('tap',function(){
-        // $.mobile.changePage('#game-page');
-    });
+    // $('.back-to-game').on('tap',function(){
+    //     $.mobile.changePage('#game-page');
+    // });
     
     $("#startGame").on('click',function(){
         try{
