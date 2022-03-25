@@ -37,7 +37,7 @@ function AIPlayer(mode, color, game){
     this.computing = false;
     this.cancel = 0;
     this.mode = mode;
-    this.worker = new Worker('./js/ai-worker.js');
+    this.worker = new Worker('/js/ai-worker.js');
     var self=this;
     this.worker.onmessage=function(e){
         switch(e.data.type){

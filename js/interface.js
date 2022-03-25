@@ -13,7 +13,7 @@ $(document).ready(function(){
         gameData.mode=$(this).val();
     });
     
-    $('#color-select input[type="radio"]').on('change', function(){
+    $('#mode-player input[type="radio"]').on('change', function(){
         gameData.color=$(this).val();
     });
     
@@ -25,7 +25,7 @@ $(document).ready(function(){
         // $.mobile.changePage('#game-page');
     });
     
-    $("#start-game").on('click',function(){
+    $("#startGame").on('click',function(){
         try{
             game.white.worker.terminate();
             game.black.worker.terminate();
@@ -47,7 +47,7 @@ $(document).ready(function(){
         }
         // $.mobile.changePage('#game-page');
         game.start();
-        setTimeout(function(){$('.back-to-game').button('enable');},100);
+        // setTimeout(function(){$('.back-to-game').button('enable');},100);
     });
 
     $("#undo-button").on('tap', function(){
