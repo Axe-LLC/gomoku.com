@@ -347,16 +347,16 @@ table.board {
 }
 
 .black.go-board.playing .go-place:not(.set):hover>.go,.go-board .go-place.black>.go,#game-info>.go.black {
-	background: black;
+	background: #0072E3;
 
-	background: -webkit-radial-gradient(30% 25%, circle closest-corner, #777,#222);
+	/* background: -webkit-radial-gradient(30% 25%, circle closest-corner, #777,#222);
 	background: -moz-radial-gradient(30% 25%, circle closest-corner, #777,#222);
 	background: -o-radial-gradient(30% 25%, circle closest-corner, #777,#222);
 	background: -ms-radial-gradient(30% 25%, circle closest-corner, #777,#222);
 	background: radial-gradient(30% 25%, circle closest-corner, #777,#222);
 
 	-webkit-box-shadow: inset 0 -2px 15px rgba(255,255,255,0.3), inset -2px -1px 40px rgba(10,10,10,0.4), 0 0 2px rgba(0,0,0,0.5);
-	box-shadow: inset 0 -2px 15px rgba(255,255,255,0.3), inset -2px -1px 40px rgba(10,10,10,0.4), 0 0 2px rgba(0,0,0,0.5);
+	box-shadow: inset 0 -2px 15px rgba(255,255,255,0.3), inset -2px -1px 40px rgba(10,10,10,0.4), 0 0 2px rgba(0,0,0,0.5); */
 
 	-webkit-transform: scale(0.9);
 	-moz-transform: scale(0.9);
@@ -366,16 +366,16 @@ table.board {
 }
 
 .white.go-board.playing .go-place:not(.set):hover>.go,.go-board .go-place.white>.go,#game-info>.go.white {
-	background: white;
+	background: #344861;
 
-	background: -webkit-radial-gradient(30% 25%, circle closest-corner, #eee,#bbb);
+	/* background: -webkit-radial-gradient(30% 25%, circle closest-corner, #eee,#bbb);
 	background: -moz-radial-gradient(30% 25%, circle closest-corner, #eee,#bbb);
 	background: -o-radial-gradient(30% 25%, circle closest-corner, #eee,#bbb);
 	background: -ms-radial-gradient(30% 25%, circle closest-corner, #eee,#bbb);
 	background: radial-gradient(30% 25%, circle closest-corner, #eee,#bbb);
 
 	-webkit-box-shadow: inset 0 -2px 15px rgba(255,255,255,0.3), inset -2px -1px 40px rgba(10,10,100,0.4), 0 0 2px rgba(0,0,0,0.5);
-	box-shadow: inset 0 -2px 15px rgba(255,255,255,0.3), inset -2px -1px 40px rgba(10,10,100,0.4), 0 0 2px rgba(0,0,0,0.5);
+	box-shadow: inset 0 -2px 15px rgba(255,255,255,0.3), inset -2px -1px 40px rgba(10,10,100,0.4), 0 0 2px rgba(0,0,0,0.5); */
 
 	-webkit-transform: scale(0.9);
 	-moz-transform: scale(0.9);
@@ -389,7 +389,7 @@ table.board {
 }
 
 .go-board.playing .go-place:not(.set):hover>.go {
-	top: -10px;
+	top: 0;
 
 	box-shadow: inset 0 -2px 15px rgba(255,255,255,0.3), inset -2px -1px 40px rgba(0,0,0,0.4), 0 10px 10px rgba(0,0,0,0.7) !important;
 	opacity: 0.7;
