@@ -430,7 +430,8 @@ ul, li {
 	font-size: 13px;
 	font-weight: bold;
 }
-#game-setting .btn-group input {
+#game-setting .btn-group input,
+#level-select input {
 	display: none;
 }
 #game-setting .btn-group {
@@ -454,6 +455,26 @@ ul, li {
 }
 #game-setting .btn-group label.selected {
 	border: 2px solid #0072E3;
+}
+#level-select {
+	background: white;
+	border-radius: 4px;
+	display: flex;
+	justify-content: space-between;
+}
+#level-select label {
+	padding: 13px 30px;
+	cursor: pointer;
+	margin-bottom: 0;
+}
+#level-select label.selected {
+	border-bottom: 3px solid #0072E3;
+}
+#level-select label.disabled {
+	opacity: 0.6;
+}
+#level-select {
+	margin-bottom: 25px;
 }
 #pc-icon {
 	width: 12px;

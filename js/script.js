@@ -2,7 +2,12 @@ $(document).ready(function() {
     $('#game-page').height($('#game-page').width());
     $('#game-page').css('min-height', 'unset');
 
-    $(".btn-group label").on('click', function() {
+    $('.btn-group label').on('click', function() {
+        $(this).parent().find('label').removeClass('selected');
+        $(this).addClass('selected');
+    });
+    $("#level-select label").on('click', function() {
+        if( $(this).hasClass('disabled') ) return false;
         $(this).parent().find('label').removeClass('selected');
         $(this).addClass('selected');
     });

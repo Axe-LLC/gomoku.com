@@ -118,6 +118,21 @@
 						<span id="user-icon"></span>Human
 					</label>
 				</div>
+				<h4>Difficulty</h4>
+				<div class="difficulty" id="level-select">
+					<input type="radio" id="selDiff1" name="selDiff" value="novice" />
+					<label for="selDiff1" id="diffLabel">
+						<span></span>Easy
+					</label>
+					<input type="radio" id="selDiff2" name="selDiff" value="medium" checked />
+					<label for="selDiff2" class="selected">
+						<span></span>Medium
+					</label>
+					<input type="radio" id="selDiff3" name="selDiff" value="expert" />
+					<label for="selDiff3">
+						<span></span>Expert
+					</label>
+				</div>
 				<h4>Play As</h4>
 				<div class="btn-group" id="mode-player">
 					<input type="radio" id="selOrder1" name="selOrder" value="black" checked />
@@ -128,19 +143,19 @@
 					<label for="selOrder2">
 						<span></span>Player2
 					</label>
-				</div>
+				</div>				
 				<h4>Board Size</h4>
 				<div class="btn-group" id="mode-boardsize">
-					<input type="radio" id="selSize1" name="selSize" value="9" checked />
-					<label for="selSize1" class="selected" id="boardSizeLabel">
+					<input type="radio" id="selSize1" name="selSize" value="9" />
+					<label for="selSize1" id="boardSizeLabel">
 						9 by 9
 					</label>
 					<input type="radio" id="selSize2" name="selSize" value="13" />
 					<label for="selSize2">
 						13 by 13
 					</label>
-					<input type="radio" id="selSize3" name="selSize" value="15" />
-					<label for="selSize3">
+					<input type="radio" id="selSize3" name="selSize" value="15" checked />
+					<label for="selSize3" class="selected">
 						15 by 15
 					</label>
 					<input type="radio" id="selSize4" name="selSize" value="19" />

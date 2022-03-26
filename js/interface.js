@@ -11,6 +11,13 @@ $(document).ready(function(){
     
     $('#mode-select input[type="radio"]').on('change', function(){
         gameData.mode=$(this).val();
+        if( gameData.mode == 'vshuman' ) {
+            $('#level-select input').attr('disabled', true);
+            $('#level-select label').addClass('disabled');
+        } else {
+            $('#level-select input').attr('disabled', false);
+            $('#level-select label').removeClass('disabled');
+        }
     });
     
     $('#mode-player input[type="radio"]').on('change', function(){
