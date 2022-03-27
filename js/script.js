@@ -24,6 +24,9 @@ $(document).ready(function() {
         $("#orderLabel").trigger('click');
         $("#boardSizeLabel").trigger('click');
         $("#themeLabel").trigger('click');
+        $('#resultModal').modal({
+            keyboard: false
+        })
     });
 
     $('#full-screen').on('click', function() {
