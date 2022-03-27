@@ -22,8 +22,8 @@ function adjustSizeGen(){
             avaiw = $('#game-page').width(),
             h = Math.max(avaih - 7, avaih * 0.98),
             w = Math.max(avaiw - 7, avaih * 0.98),
-            vspace = Math.min(h, w),
-            hspace = Math.min(w, h - 40),
+            vspace = Math.min(h - 8, w),
+            hspace = Math.min(w - 8, h - 40),
             hsize;
 
         if(smallScreen){
@@ -39,7 +39,7 @@ function adjustSizeGen(){
         if(vspace > hspace){
             hsize = Math.min(~~((vspace - 15) / 15 / 2), ~~((avaiw - 22) / 15 / 2));
             gameRegion.css({
-                'padding': hsize+6,
+                'padding': hsize,
                 // 'margin-left': -((2*hsize+1)*15+12)/2,
                 // 'padding-top': 100+hsize,
                 // 'padding-bottom': 50+hsize,
