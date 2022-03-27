@@ -9,7 +9,7 @@ $(document).ready(function(){
     // $.mobile.defaultDialogTransition = 'flip';
     // $.mobile.defaultPageTransition = 'flip';
     
-    $('#mode-select input[type="radio"]').on('change', function(){
+    $('#mode-select input[type="radio"]').on('click', function(){
         gameData.mode=$(this).val();
         if( gameData.mode == 'vshuman' ) {
             $('#level-select input').attr('disabled', true);
@@ -20,7 +20,7 @@ $(document).ready(function(){
         }
     });
     
-    $('#mode-player input[type="radio"]').on('change', function(){
+    $('#mode-player input[type="radio"]').on('click', function(){
         gameData.color=$(this).val();
         if( $(this).val() == 'black' ) {
             $('#pc-icon').removeClass('blue');
@@ -33,6 +33,15 @@ $(document).ready(function(){
     
     $('#level-select input[type="radio"]').on('change', function(){
         gameData.level=$(this).val();
+    });
+
+    $('#mode-boardsize input[type="radio"]').on('change', function(){
+        gameData.boardsize=$(this).val();
+    });
+
+    $('#mode-theme input[type="radio"]').on('change', function(){
+        gameData.theme='theme-' + $(this).val();
+        $('#main-page').attr('class', gameData.theme);
     });
     
     // $('.back-to-game').on('tap',function(){

@@ -22,8 +22,8 @@ function adjustSizeGen(){
             avaiw = $('#game-page').width(),
             h = Math.max(avaih - 7, avaih * 0.98),
             w = Math.max(avaiw - 7, avaih * 0.98),
-            vspace = Math.min(h - 8, w),
-            hspace = Math.min(w - 8, h - 40),
+            vspace = Math.min(h, w),
+            hspace = Math.min(w, h - 40),
             hsize;
 
         if(smallScreen){

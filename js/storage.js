@@ -49,6 +49,14 @@ gameData.addRecord('level', 'medium', function(val){
     $('#level-select input[value="'+val+'"]').attr('checked',true);
     // $('#level-select input[type="radio"]').checkboxradio('refresh');
 });
+gameData.addRecord('boardsize', '15', function(val){
+    $('#mode-boardsize input[value="'+val+'"]').attr('checked',true);
+    // $('#level-select input[type="radio"]').checkboxradio('refresh');
+});
+gameData.addRecord('theme', 'standard', function(val){
+    $('#level-select input[value="theme-'+val+'"]').attr('checked',true);
+    // $('#level-select input[type="radio"]').checkboxradio('refresh');
+});
 
 gameData.load=function(){
     if(!this.firstTime){
