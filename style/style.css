@@ -422,6 +422,27 @@ ul, li {
 .page-content .desc li::marker {
 	font-size: 20px;
 }
+/* privacy */
+.privacy {
+	background: #F3F6FA;
+	padding-top: 37px;
+	padding-bottom: 25px;
+	text-align: center;
+	color: #344861;
+	font-size: 14px;
+	line-height: 22px;
+	position: relative;
+}
+.privacy a {
+	text-decoration: none;
+	color: #0072E3;
+}
+.privacy .close {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	color: black;
+}
 /* game setting */
 #game-setting, .coming-soon {
 	padding: 20px;

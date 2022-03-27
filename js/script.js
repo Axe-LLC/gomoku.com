@@ -15,6 +15,9 @@ $(document).ready(function() {
     $(".coming-soon .close").on('click', function() {
         $(".coming-soon").fadeOut();
     });
+    $(".privacy .close").on('click', function() {
+        $(".privacy").fadeOut();
+    });
 
     $("#resetGame").on('click', function() {
         $("#playerLabel").trigger('click');
