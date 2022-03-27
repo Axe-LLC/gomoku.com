@@ -32,12 +32,6 @@
 	<script src='js/script.js' type='text/javascript'></script>
 </head>
 <body ontouchstart="">
-<!-- <div class='fullscreen-wrapper' id='happy-outer'>
-	<img src='images/happy.png' class='happy-face screen-center'>
-</div>
-<div class='fullscreen-wrapper' id='sad-outer'>
-	<img src='images/sad.png' class='sad-face screen-center'>
-</div> -->
 <div data-role="page" class="theme-standard" id="main-page">
 	<!-- Header section -->
 	<div class="header">
@@ -69,8 +63,8 @@
 			<div class='game-nav'>
 				<ul>
 					<li id='full-screen'>Full Screen Mode</li>
-					<li>Undo Move</li>
-					<li>Restart Game</li>
+					<li id='undo-button'>Undo Move</li>
+					<li id='restart-game'>Restart Game</li>
 				</ul>
 			</div>
 		</div>
@@ -258,13 +252,15 @@
 	<div class="modal-dialog" role="document">
 	  <div class="modal-content">
 		<div class="modal-body">
-		  <h2>WINNER!</h2>
-		  <p>Conrats you are the winner!!
-			Chiken dinner</p>
-		</div>
-		<div class="modal-footer">
-		  <button type="button" class="btn btn-home">Home</button>
-		  <button type="button" class="btn btn-primary">Play again</button>
+		  	<h2>WINNER!</h2>
+		  	<p>
+				Conrats you are the winner!! <br />
+				Chiken dinner
+			</p>
+			<div class="flex space-between">
+				<button type="button" class="btn-home">Home</button>
+				<button type="button" class="btn-playagain" data-dismiss="modal">Play again</button>
+			</div>
 		</div>
 	  </div>
 	</div>
@@ -281,7 +277,6 @@
 			<div class="ui-block-a"><button class='back-to-game'  data-theme='c'>Back</button></div>
 		</fieldset>
 	</div>
-</div>
--->
+</div> -->
 </body>
 </html>

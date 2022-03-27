@@ -88,17 +88,6 @@ body {
 	left: 50%;
 	z-index: 99;
 }
-.fullscreen-wrapper>.screen-center { position: absolute; }
-.fullscreen-wrapper {
-	position: fixed;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	background: transparent;
-	display: none;
-	z-index: 99;
-}
 .happy-face {
 	margin-left: -160px;
 	margin-top: -120px;
@@ -729,4 +718,50 @@ ul, li {
 }
 .theme-dark .go-darkdot::before {
 	background: white;
+}
+/* modal */
+#resultModal .modal-dialog {
+	width: 390px;
+	text-align: center;
+	margin: 15% auto;
+}
+#resultModal h2 {
+	color: #14142B;
+	font-size: 20px;
+	font-weight: bold;
+}
+#resultModal p {
+	color: #4E4B66;
+	font-size: 12px;
+	line-height: 20px;
+	margin-top: 20px;
+	margin-bottom: 30px;
+}
+#resultModal .modal-body {
+	padding: 35px;
+}
+.btn-home, 
+.btn-playagain {
+	width: 46%;
+	border-radius: 10px;
+	padding: 10px;
+	opacity: 1;
+	transition: all 0.4s ease-in-out;
+}
+.btn-home:hover, 
+.btn-playagain:hover {
+	opacity: 0.8;
+}
+button:focus, button:active {
+	outline: unset;
+}
+.btn-home {
+	border: 2px solid #0072E3;
+	background: white;
+	color: #0072E3;
+}
+.btn-playagain {
+	border: 2px solid #0072E3;
+	background: #0072E3;
+	color: white;
 }
