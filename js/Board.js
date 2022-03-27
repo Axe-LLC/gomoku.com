@@ -78,7 +78,7 @@ var Board = function(boardElm, backgroundElm){
     var clickable = true,
         places = [],
         map = [],
-        numToColor = ["black", "white"],
+        numToColor = ["white", "black"],
         colorToNum = (function(){
             var obj = {};
             numToColor.forEach(function(elm, ind){

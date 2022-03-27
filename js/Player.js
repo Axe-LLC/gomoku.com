@@ -5,9 +5,9 @@ function Player(color){
 
 Player.prototype.myTurn = function(){
     this.game.setCurrentColor(this.color);
-    let turnVal = 'Black';
+    let turnVal = 'White';
     if( this.color == 'black' )
-        turnVal = 'Blue';
+        turnVal = 'Black';
     gameInfo.setText((function(string){
         return string.charAt(0).toUpperCase() + string.slice(1);
     })(turnVal)+" Player Turn");

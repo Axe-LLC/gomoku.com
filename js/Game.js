@@ -6,7 +6,7 @@ function Game(boardElm, boardBackgroundElm){
         history = [],
         players = {},
         board = new Board(boardElm, boardBackgroundElm),
-        currentColor = "black";
+        currentColor = "white";
 
     board.clicked = function(r, c){
         var p = players[currentColor];

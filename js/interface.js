@@ -55,7 +55,7 @@ $(document).ready(function(){
         }catch(e){}
         if(gameData.mode==='vshuman'){
             game.mode='hvh';
-            game.init(new HumanPlayer("black"), new HumanPlayer("white"));
+            game.init(new HumanPlayer("white"), new HumanPlayer("black"));
         }else{
             var color, other;
             if(gameData.color==='black'){
@@ -78,7 +78,7 @@ $(document).ready(function(){
         }catch(e){}
         if(gameData.mode==='vshuman'){
             game.mode='hvh';
-            game.init(new HumanPlayer("black"), new HumanPlayer("white"));
+            game.init(new HumanPlayer("white"), new HumanPlayer("black"));
         }else{
             var color, other;
             if(gameData.color==='black'){
@@ -103,6 +103,10 @@ $(document).ready(function(){
     gameData.load();
     // $('.back-to-game').button('disable');
     // $.mobile.changePage('#new-game',{changeHash: false});
+
+    setTimeout(function() {
+        $("#startGame").trigger('click');
+    }, 100);
 
     window.gameInfo = (function(){
         var blinking = false,
