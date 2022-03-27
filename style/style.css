@@ -207,7 +207,9 @@ table.board {
 	left: 0;
 }
 .go-board .go-place.last-move>.go {
-	box-shadow: inset 0 -2px 15px rgba(255,255,255,0.3), inset -2px -1px 40px rgba(10,10,10,0.4), 0 0 2px rgba(0,0,0,0.5), 0 0 10px 3px white !important;
+	/* box-shadow: inset 0 -2px 15px rgba(255,255,255,0.3), inset -2px -1px 40px rgba(10,10,10,0.4), 0 0 2px rgba(0,0,0,0.5), 0 0 10px 3px white !important; */
+	/* box-shadow: inset -4px 2px #257ed8; */
+	border: 1px solid #0072E3;
 }
 #game-info>.go {
 	border-radius: 1000px;
@@ -250,7 +252,12 @@ table.board {
 }
 .black.go-board.playing .go-place:not(.set):hover>.go,.go-board .go-place.black>.go,#game-info>.go.black {
 	background: #0072E3;
-	background: linear-gradient(211.18deg, #0072E3 19.7%, #0072E3 23.91%, #0F5DAB 75.88%);
+	/* background: linear-gradient(211.18deg, #0072E3 19.7%, #0072E3 23.91%, #0F5DAB 75.88%); */
+	background: -moz-radial-gradient(top right, rgb(15, 128, 241), rgb(5, 63, 121));
+  	background: radial-gradient(to bottom left, rgb(15, 128, 241), rgb(5, 63, 121));
+	background: -webkit-radial-gradient(top right, rgb(15, 128, 241), rgb(5, 63, 121));
+	box-shadow: inset -4px 2px #257ed8;
+
 	-webkit-transform: scale(0.9);
 	-moz-transform: scale(0.9);
 	-o-transform: scale(0.9);
@@ -259,12 +266,22 @@ table.board {
 }
 .white.go-board.playing .go-place:not(.set):hover>.go,.go-board .go-place.white>.go,#game-info>.go.white {
 	background: #344861;
-	background: linear-gradient(211.18deg, #344861 19.7%, #344861 23.91%, #2F4861 75.88%);
+	/* background: linear-gradient(211.18deg, #344861 19.7%, #344861 23.91%, #2F4861 75.88%); */
+	background: -moz-radial-gradient(top right, #344861, #546071);
+  	background: radial-gradient(to bottom left, #344861, #546071);
+	background: -webkit-radial-gradient(top right, #344861, #546071);
+	box-shadow: inset -4px 2px #546071;
 	-webkit-transform: scale(0.9);
 	-moz-transform: scale(0.9);
 	-o-transform: scale(0.9);
 	-ms-transform: scale(0.9);
 	transform: scale(0.9);
+}
+.go-board .go-place.black.last-move>.go {
+	border: 1px solid #344861;
+}
+.go-board .go-place.white.last-move>.go {
+	border: 1px solid #0072E3;
 }
 .go-board .go-place.set>.go { top: 0; }
 .go-board.playing .go-place:not(.set):hover>.go {
@@ -764,4 +781,7 @@ button:focus, button:active {
 	border: 2px solid #0072E3;
 	background: #0072E3;
 	color: white;
+}
+#restart-game {
+	color: #FF0000;
 }
