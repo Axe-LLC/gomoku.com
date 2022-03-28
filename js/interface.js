@@ -99,7 +99,7 @@ $(document).ready(function(){
         $('#mode-theme input[value="'+gameData.theme+'"]').attr('checked',true);
         $('#mode-theme label').removeClass('selected');
         $('#mode-theme input[value="'+gameData.theme+'"]').next().addClass('selected');
-        
+
         $('#main-page').attr('class', 'theme-' + gameData.theme);
     }
     gameInitSetting();
@@ -121,6 +121,7 @@ $(document).ready(function(){
 
     $(".btn-playagain").on('click',function(){
         gameInit();
+        game.start();
     });
 
     $("#undo-button").on('click', function(){
