@@ -7,8 +7,8 @@ function adjustSizeGen(){
     return function(){
         var avaih = $('#game-page').height(),
             avaiw = $('#game-page').width(),
-            h = Math.max(avaih - 7, avaih * 0.98),
-            w = Math.max(avaiw - 7, avaih * 0.98),
+            h = Math.max(avaih, avaih * 0.98),
+            w = Math.max(avaiw, avaih * 0.98),
             vspace = Math.min(h, w),
             hspace = Math.min(w, h - 40),
             hsize;
@@ -26,12 +26,14 @@ function adjustSizeGen(){
         if(vspace > hspace){
             hsize = Math.min(~~((vspace - 15) / 15 / 2), ~~((avaiw - 22) / 15 / 2));
             gameRegion.css({
-                'padding': hsize,
+                'padding': 40,
             });
             tds.css('padding',hsize);
             board.css({
-                'left': 6,
-                'right': 6
+                'left': 46 - hsize,
+                'right': 46 - hsize,
+                'top': 46 - hsize,
+                'bottom': 46 - hsize,
             });
         }else{
             hsize = ~~((hspace - 15) / 15 / 2);

@@ -1,6 +1,6 @@
 $(document).ready(function(){
     let w = $('#game-page').width();
-    let full = $(window).height() - 200;
+    let full = $(window).height() - 250;
     if( w > full )
         $('#game-page').height(full);
     else
@@ -131,14 +131,11 @@ $(document).ready(function(){
     });
 
     $("#undo-button").on('click', function(){
+        if( $("#newGame").prop('disabled') ) return false;
         game.undo();
     });
 
-    // $('#new-game').page();
-    // $('#game-won').page();
     gameData.load();
-    // $('.back-to-game').button('disable');
-    // $.mobile.changePage('#new-game',{changeHash: false});
 
     setTimeout(function() {
         $("#startGame").trigger('click');

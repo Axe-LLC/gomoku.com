@@ -33,7 +33,7 @@ $(document).ready(function() {
 
 $(window).resize(function() {
     let w = $('#game-page').width();
-    let full = $(window).height() - 200;
+    let full = $(window).height() - 250;
     if( w > full )
         $('#game-page').height(full);
     else
