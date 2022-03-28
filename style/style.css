@@ -65,7 +65,7 @@
  }
 }
 body {
-	font-family: Helvetica,Arial,sans-serif;
+	font-family: 'Gilroy';
 	background: white;
 }
 .no-background { background: none; }
@@ -107,7 +107,6 @@ header.game-ult {
 	top: 0;
 	color: #9C5321;
 	text-shadow: 0 1px 1px rgba(255,255,255,0.5), 0 -1px 1px rgba(0,0,0,0.5);
-	font-family: Helvetica,Arial,sans-serif;
 }
 .thinking {
 	top: 45px;
@@ -142,7 +141,6 @@ header.game-ult {
 .thinking>h4 {
 	font-size: 2em;
 	margin: 0;
-	font-family: sans;
 }
 .game-title {
 	width: 250px;
@@ -372,6 +370,7 @@ ul, li {
 	text-decoration: none;
 	color: #344861;
 	font-size: 14px;
+	font-family: 'Gilroy_Bold';
 }
 /* Controller */
 .controller {
