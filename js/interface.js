@@ -7,6 +7,8 @@ $(document).ready(function(){
         $('#game-page').height($('#game-page').width());
     $('#game-page').css('min-height', 'unset');
 
+    $('#backdrop-topmenu').hide();
+
     var game = new Game($(".go-board"), $(".board tbody"));
 
     var adjustSize = adjustSizeGen();
@@ -115,6 +117,7 @@ $(document).ready(function(){
     $("#startGame").on('click',function(){
         $("#backdrop-over").show();
         $("#backdropgame-over").hide();
+        $("#backdrop-topmenu").hide();
         $("#newGame").prop('disabled', false);
         gameInit();
         game.start();
@@ -122,6 +125,7 @@ $(document).ready(function(){
 
     $("#newGame").on('click',function(){
         $("#backdrop-over").hide();
+        $("#backdrop-topmenu").show();
         $("#backdropgame-over").show();
         $(this).prop('disabled', true);
         gameInit();
