@@ -24,6 +24,8 @@ $(document).ready(function() {
         $('#level-select input').attr('disabled', false);
         $('#level-select label').removeClass('disabled');
         $("#diffLabel").trigger('click');
+        gameData.mode = 'vs-computer';
+        gameData.boardsize = '15';
     }
 
     $("#resetGame").on('click', function() {
