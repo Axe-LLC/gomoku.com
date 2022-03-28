@@ -19,7 +19,7 @@ $(document).ready(function() {
     function resetSettings() {
         $("#playerLabel").trigger('click');
         $("#orderLabel").trigger('click');
-        $("#boardSizeLabel").trigger('click');
+        // $("#boardSizeLabel").trigger('click');
         $("#themeLabel").trigger('click');
         $('#level-select input').attr('disabled', false);
         $('#level-select label').removeClass('disabled');

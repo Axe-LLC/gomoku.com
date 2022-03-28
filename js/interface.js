@@ -99,9 +99,9 @@ $(document).ready(function(){
         $('#mode-player input[value="'+gameData.color+'"]').next().addClass('selected');
 
         /* board size */
-        $('#mode-boardsize input[value="'+gameData.boardsize+'"]').attr('checked',true);
-        $('#mode-boardsize label').removeClass('selected');
-        $('#mode-boardsize input[value="'+gameData.boardsize+'"]').next().addClass('selected');
+        // $('#mode-boardsize input[value="'+gameData.boardsize+'"]').attr('checked',true);
+        // $('#mode-boardsize label').removeClass('selected');
+        // $('#mode-boardsize input[value="'+gameData.boardsize+'"]').next().addClass('selected');
 
         /* theme */
         $('#mode-theme input[value="'+gameData.theme+'"]').attr('checked',true);
