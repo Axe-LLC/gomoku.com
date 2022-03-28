@@ -5,9 +5,9 @@ function adjustSizeGen(){
         tds = $('.board td'),
         board = $('.go-board'),
         // gameHeader = $('header.game-ult'),
-        gameInfo = $('#game-info'),
-        mainButs = $('#main-but-group'),
-        otherButs = $('#other-but-group');
+        // gameInfo = $('#game-info'),
+        // mainButs = $('#main-but-group'),
+        // otherButs = $('#other-but-group');
 
     return function(){
         // var avaih = window.innerHeight,
@@ -53,20 +53,20 @@ function adjustSizeGen(){
                 'right': 6
             });
             // gameHeader.css('line-height', 80+'px');
-            gameInfo.css({
-                'top': 20,
-                'width': ((2*hsize+1)*15+12)/2-150
-            });
-            mainButs.css({
-                'top': 6,
-                'right': 6,
-                'width': 160
-            });
-            otherButs.css({
-                'bottom': 6,
-                'right': 6,
-                'width': 160
-            });
+            // gameInfo.css({
+            //     'top': 20,
+            //     'width': ((2*hsize+1)*15+12)/2-150
+            // });
+            // mainButs.css({
+            //     'top': 6,
+            //     'right': 6,
+            //     'width': 160
+            // });
+            // otherButs.css({
+            //     'bottom': 6,
+            //     'right': 6,
+            //     'width': 160
+            // });
         }else{
             hsize = ~~((hspace - 15) / 15 / 2);
             gameRegion.css({
@@ -85,21 +85,21 @@ function adjustSizeGen(){
                 'right': 160
             });
             // gameHeader.css('line-height', 36+hsize+'px');
-            gameInfo.css({
-                'left': 15,
-                'top': 36+hsize,
-                'width': 160+6-45-hsize/2
-            });
-            mainButs.css({
-                'top': 36+hsize,
-                'right': 6,
-                'width': 160
-            });
-            otherButs.css({
-                'bottom': 6+hsize,
-                'right': 6,
-                'width': 160
-            });
+            // gameInfo.css({
+            //     'left': 15,
+            //     'top': 36+hsize,
+            //     'width': 160+6-45-hsize/2
+            // });
+            // mainButs.css({
+            //     'top': 36+hsize,
+            //     'right': 6,
+            //     'width': 160
+            // });
+            // otherButs.css({
+            //     'bottom': 6+hsize,
+            //     'right': 6,
+            //     'width': 160
+            // });
         }
 
     };
