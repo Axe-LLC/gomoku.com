@@ -45,14 +45,14 @@ $(document).ready(function(){
 
     $('#mode-boardsize input[type="radio"]').on('change', function(){
         gameData.boardsize=$(this).val();
-        game = null;
-        $(".go-board").html('');
-        $(".board tbody").html('');
-        game = new Game($(".go-board"), $(".board tbody"));
-        
-        adjustSize = adjustSizeGen();
-        $(window).resize(adjustSize);
-        adjustSize();
+        // game = null;
+        // $(".go-board").html('');
+        // $(".board tbody").html('');
+        // game = new Game($(".go-board"), $(".board tbody"));
+
+        // adjustSize = adjustSizeGen();
+        // $(window).resize(adjustSize);
+        // adjustSize();
     });
 
     $('#mode-theme input[type="radio"]').on('change', function(){
