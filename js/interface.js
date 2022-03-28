@@ -1,6 +1,6 @@
 $(document).ready(function(){
     let w = $('#game-page').width();
-    let full = $(window).height() - 250;
+    let full = $(window).height() - 280;
     if( w > full )
         $('#game-page').height(full);
     else
