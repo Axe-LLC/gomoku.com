@@ -218,3 +218,7 @@ function showWinDialog(game){
     //     }
     // }
 }
+
+$(window).resize(function() {
+    adjustSizeGen();
+});

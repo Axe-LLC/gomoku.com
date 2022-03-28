@@ -1,5 +1,6 @@
 function adjustSizeGen(){
-    var smallScreen = navigator.userAgent.toLowerCase().match(/(iphone|ipod)/);
+    // var smallScreen = navigator.userAgent.toLowerCase().match(/(iphone|ipod|android)/);
+    var smallScreen = $(window).width()>520?false:true;
 
     var gameRegion = $("#game-region"),
         tds = $('.board td'),
@@ -14,18 +15,34 @@ function adjustSizeGen(){
             hsize;
 
         if(smallScreen){
-            if(avaih > avaiw){
-                vspace = avaiw;
-                hspace = 0;
-            }
+            // if(avaih > avaiw){
+            //     vspace = avaiw;
+            //     hspace = 0;
+            // }
             // else{
             //     hspace = avaih - 40;
             //     vspace = 0;
             // }
+            h = Math.max(avaih - 30, avaih * 0.98 - 30);
+            w = Math.max(avaiw - 30, avaih * 0.98 - 30);
+            vspace = Math.min(h, w);
+            hspace = Math.min(w, h - 30);
         }
 
         // if(vspace > hspace){
-            hsize = Math.min(~~((vspace - 15) / gameData.boardsize / 2), ~~((avaiw - 22) / gameData.boardsize / 2));
+        hsize = Math.min(~~((vspace - 15) / gameData.boardsize / 2), ~~((avaiw - 22) / gameData.boardsize / 2));
+        if(smallScreen){
+            gameRegion.css({
+                'padding': 30,
+            });
+            tds.css('padding',hsize-1);
+            board.css({
+                'left': 36 - hsize,
+                'right': 36 - hsize,
+                'top': 36 - hsize,
+                'bottom': 36 - hsize,
+            });
+        } else {
             gameRegion.css({
                 'padding': 40,
             });
@@ -36,6 +53,7 @@ function adjustSizeGen(){
                 'top': 46 - hsize,
                 'bottom': 46 - hsize,
             });
+        }
         // }else{
         //     hsize = ~~((hspace - 15) / gameData.boardsize / 2);
         //     gameRegion.css({
@@ -65,9 +83,16 @@ function adjustSizeGen(){
             $('#topLetters').append('<span>' + letters[i] + '</span>');
             $('#bottomLetters').append('<span>' + letters[i] + '</span>');
         }
-        $('#leftLetters span').css('padding-top', (hsize*2-13)+'px');
-        $('#rightLetters span').css('padding-top', (hsize*2-13)+'px');
-        $('#topLetters span').css('padding-right', (hsize*2-5)+'px');
-        $('#bottomLetters span').css('padding-right', (hsize*2-5)+'px');
+        if( smallScreen ) {
+            $('#leftLetters span').css('padding-top', (hsize*2-15)+'px');
+            $('#rightLetters span').css('padding-top', (hsize*2-15)+'px');
+            $('#topLetters span').css('padding-right', (hsize*2-7)+'px');
+            $('#bottomLetters span').css('padding-right', (hsize*2-7)+'px');
+        } else {
+            $('#leftLetters span').css('padding-top', (hsize*2-13)+'px');
+            $('#rightLetters span').css('padding-top', (hsize*2-13)+'px');
+            $('#topLetters span').css('padding-right', (hsize*2-5)+'px');
+            $('#bottomLetters span').css('padding-right', (hsize*2-5)+'px');
+        }
     };
 }

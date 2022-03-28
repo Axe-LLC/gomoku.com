@@ -926,4 +926,12 @@ button:focus, button:active {
 		margin: 0;
 	}
 	.nav { display: none; }
+	#leftLetters, #rightLetters { 
+		width: 30px; 
+		bottom: 28px;
+	}
+	#topLetters, #bottomLetters { 
+		height: 30px; 
+		left: 30px;
+	}
 }
