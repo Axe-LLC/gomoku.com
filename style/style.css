@@ -891,10 +891,10 @@ button:focus, button:active {
 @media (min-width: 1600px) 
 {
 	.container {
-		width: 1100px;
+		width: 950px;
 	}
 }
-@media (max-width: 870px) {
+/* @media (max-width: 870px) {
 	.game-wrapper {
 		display: block;
 	}
@@ -904,6 +904,11 @@ button:focus, button:active {
 	.game-wrapper .game-sidebar {
 		width: 50%;
 		margin: 30px auto;
+	}
+} */
+@media (min-width: 530px) {
+	.container {
+		width: 950px;
 	}
 }
 
