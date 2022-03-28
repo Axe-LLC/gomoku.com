@@ -16,28 +16,6 @@ $(document).ready(function(){
     adjustSize();
     // $.mobile.defaultDialogTransition = 'flip';
     // $.mobile.defaultPageTransition = 'flip';
-
-    function initSetting() {
-        /* mode */
-        if( gameData.mode == 'vshuman' ) {
-            $('#level-select input').attr('disabled', true);
-            $('#level-select label').addClass('disabled');
-        } else {
-            $('#level-select input').attr('disabled', false);
-            $('#level-select label').removeClass('disabled');
-        }
-
-        /* player */
-        if( gameData.color == 'white' ) {
-            $('#pc-icon').removeClass('blue');
-            $('#user-icon').removeClass('blue');
-        } else {
-            $('#pc-icon').addClass('blue');
-            $('#user-icon').addClass('blue');
-        }
-
-        /* level */
-    }
     
     $('#mode-select input[type="radio"]').on('click', function(){
         gameData.mode=$(this).val();
@@ -74,10 +52,6 @@ $(document).ready(function(){
         $('#main-page').attr('class', gameData.theme);
     });
     
-    // $('.back-to-game').on('tap',function(){
-    //     $.mobile.changePage('#game-page');
-    // });
-
     function gameInit() {
         try{
             game.white.worker.terminate();
