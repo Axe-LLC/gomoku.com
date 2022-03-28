@@ -393,11 +393,11 @@ ul, li {
 	padding-bottom: 4rem;
 }
 .game-wrapper #game-page {
-	width: 66%;
+	width: 60%;
 	min-height: 916px;
 }
 .game-wrapper .game-sidebar {
-	width: 32%;
+	width: 35%;
 }
 .ui-body-c, .ui-overlay-c {
 	background: none;
