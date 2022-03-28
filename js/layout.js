@@ -7,8 +7,8 @@ function adjustSizeGen(){
     return function(){
         var avaih = $('#game-page').height(),
             avaiw = $('#game-page').width(),
-            h = Math.max(avaih, avaih * 0.98),
-            w = Math.max(avaiw, avaih * 0.98),
+            h = Math.max(avaih - 40, avaih * 0.98 - 40),
+            w = Math.max(avaiw - 40, avaih * 0.98 - 40),
             vspace = Math.min(h, w),
             hspace = Math.min(w, h - 40),
             hsize;

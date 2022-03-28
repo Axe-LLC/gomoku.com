@@ -16,6 +16,28 @@ $(document).ready(function(){
     adjustSize();
     // $.mobile.defaultDialogTransition = 'flip';
     // $.mobile.defaultPageTransition = 'flip';
+
+    function initSetting() {
+        /* mode */
+        if( gameData.mode == 'vshuman' ) {
+            $('#level-select input').attr('disabled', true);
+            $('#level-select label').addClass('disabled');
+        } else {
+            $('#level-select input').attr('disabled', false);
+            $('#level-select label').removeClass('disabled');
+        }
+
+        /* player */
+        if( gameData.color == 'white' ) {
+            $('#pc-icon').removeClass('blue');
+            $('#user-icon').removeClass('blue');
+        } else {
+            $('#pc-icon').addClass('blue');
+            $('#user-icon').addClass('blue');
+        }
+
+        /* level */
+    }
     
     $('#mode-select input[type="radio"]').on('click', function(){
         gameData.mode=$(this).val();
@@ -55,11 +77,8 @@ $(document).ready(function(){
     // $('.back-to-game').on('tap',function(){
     //     $.mobile.changePage('#game-page');
     // });
-    
-    $("#startGame").on('click',function(){
-        $("#backdrop-over").show();
-        $("#backdropgame-over").hide();
-        $("#newGame").prop('disabled', false);
+
+    function gameInit() {
         try{
             game.white.worker.terminate();
             game.black.worker.terminate();
@@ -79,6 +98,13 @@ $(document).ready(function(){
             game.mode=gameData.level;
             game.init(new HumanPlayer(color), new AIPlayer(game.mode, other));
         }
+    }
+    
+    $("#startGame").on('click',function(){
+        $("#backdrop-over").show();
+        $("#backdropgame-over").hide();
+        $("#newGame").prop('disabled', false);
+        gameInit();
         game.start();
     });
 
@@ -86,48 +112,11 @@ $(document).ready(function(){
         $("#backdrop-over").hide();
         $("#backdropgame-over").show();
         $(this).prop('disabled', true);
-        try{
-            game.white.worker.terminate();
-            game.black.worker.terminate();
-        }catch(e){}
-        var color, other;
-        if(gameData.color=='black'){
-            color='black';
-            other='white';
-        }else{
-            color='white';
-            other='black';
-        }
-        if(gameData.mode==='vshuman'){
-            game.mode='hvh';
-            game.init(new HumanPlayer(color), new HumanPlayer(other));
-        }else{
-            game.mode=gameData.level;
-            game.init(new HumanPlayer(color), new AIPlayer(game.mode, other));
-        }
+        gameInit();
     });
 
     $(".btn-playagain").on('click',function(){
-        try{
-            game.white.worker.terminate();
-            game.black.worker.terminate();
-        }catch(e){}
-        var color, other;
-        if(gameData.color=='black'){
-            color='black';
-            other='white';
-        }else{
-            color='white';
-            other='black';
-        }
-        if(gameData.mode==='vshuman'){
-            game.mode='hvh';
-            game.init(new HumanPlayer(color), new HumanPlayer(other));
-        }else{
-            game.mode=gameData.level;
-            game.init(new HumanPlayer(color), new AIPlayer(game.mode, other));
-        }
-        game.start();
+        gameInit();
     });
 
     $("#undo-button").on('click', function(){
