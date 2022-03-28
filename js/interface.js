@@ -6,7 +6,7 @@ $(document).ready(function(){
     else
         $('#game-page').height($('#game-page').width());
     $('#game-page').css('min-height', 'unset');
-    
+
     var game = new Game($(".go-board"), $(".board tbody"));
 
     var adjustSize = adjustSizeGen();
@@ -57,6 +57,9 @@ $(document).ready(function(){
     // });
     
     $("#startGame").on('click',function(){
+        $("#backdrop-over").show();
+        $("#backdropgame-over").hide();
+        $("#newGame").prop('disabled', false);
         try{
             game.white.worker.terminate();
             game.black.worker.terminate();
@@ -77,6 +80,17 @@ $(document).ready(function(){
             game.init(new HumanPlayer(color), new AIPlayer(game.mode, other));
         }
         game.start();
+    });
+
+    $("#newGame").on('click',function(){
+        $("#backdrop-over").hide();
+        $("#backdropgame-over").show();
+        $(this).prop('disabled', true);
+        try{
+            game.white.worker.terminate();
+            game.black.worker.terminate();
+        }catch(e){}
+        game.init();
     });
 
     $(".btn-playagain").on('click',function(){
