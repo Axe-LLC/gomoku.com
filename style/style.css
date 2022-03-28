@@ -229,7 +229,9 @@ table.board {
 	font-size: 1.1em;
 	display: flex;
     justify-content: flex-start;
-    align-items: center;
+	align-items: center;
+	color: #344861;
+	font-family: 'Gilroy_Bold';
 }
 .blinking {
 	-webkit-animation: blink 0.7s;
@@ -380,6 +382,7 @@ ul, li {
 	display: flex;
 	align-items: center;
 	margin-bottom: 30px;
+	min-width: 950px;
 }
 .controller .container {
 	display: flex;
@@ -475,6 +478,24 @@ ul, li {
 	top: 0;
 	left: 0;
 	z-index: 99;
+}
+#game-setting #backdrop-over {
+	opacity: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid #E5EBF2;
+	border-radius: 10px;
+}
+#game-setting #backdrop-over p {
+	text-align: center;
+	font-size: 12px;
+	line-height: 20px;
+	color: #344861;
+	font-weight: bold;
+}
+#game-setting #backdrop-over p span {
+	color: #0072E3;
 }
 #game-page #backdropgame-over {
 	display: none;
@@ -673,7 +694,6 @@ ul, li {
 }
 .coming-soon h5 strong {
 	color: #71C766;
-	font-weight: bold;
 }
 .coming-soon .close {
 	position: absolute;
@@ -687,6 +707,7 @@ ul, li {
 	cursor: pointer;
 	color: #344861;
 	font-size: 14px;
+	font-family: 'Gilroy_Bold';
 }
 .game-nav .new-game {
 	background: #0072E3;
@@ -694,7 +715,7 @@ ul, li {
 	border-radius: 4px;
 	border: none;
 	padding: 10px;
-	width: 180px;
+	width: 320px;
 	font-size: 14px;
 	transition: all 0.4s ease-in-out;
 	opacity: 1;
