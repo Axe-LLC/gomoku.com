@@ -135,6 +135,6 @@ function Game(boardElm, boardBackgroundElm){
 
     this.start = function(){
         playing = true;
-        players.black.myTurn();
+        players.white.myTurn();
     };
 }

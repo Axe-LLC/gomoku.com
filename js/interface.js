@@ -22,7 +22,7 @@ $(document).ready(function(){
     
     $('#mode-player input[type="radio"]').on('click', function(){
         gameData.color=$(this).val();
-        if( $(this).val() == 'black' ) {
+        if( $(this).val() == 'white' ) {
             $('#pc-icon').removeClass('blue');
             $('#user-icon').removeClass('blue');
         } else {
@@ -58,7 +58,7 @@ $(document).ready(function(){
             game.init(new HumanPlayer("white"), new HumanPlayer("black"));
         }else{
             var color, other;
-            if(gameData.color==='black'){
+            if(gameData.color=='black'){
                 color='black';
                 other='white';
             }else{
@@ -81,7 +81,7 @@ $(document).ready(function(){
             game.init(new HumanPlayer("white"), new HumanPlayer("black"));
         }else{
             var color, other;
-            if(gameData.color==='black'){
+            if(gameData.color=='black'){
                 color='black';
                 other='white';
             }else{
