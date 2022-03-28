@@ -24,7 +24,7 @@ function adjustSizeGen(){
         }
 
         if(vspace > hspace){
-            hsize = Math.min(~~((vspace - 15) / 15 / 2), ~~((avaiw - 22) / 15 / 2));
+            hsize = Math.min(~~((vspace - 15) / gameData.boardsize / 2), ~~((avaiw - 22) / gameData.boardsize / 2));
             gameRegion.css({
                 'padding': 40,
             });
@@ -36,13 +36,13 @@ function adjustSizeGen(){
                 'bottom': 46 - hsize,
             });
         }else{
-            hsize = ~~((hspace - 15) / 15 / 2);
+            hsize = ~~((hspace - 15) / gameData.boardsize / 2);
             gameRegion.css({
                 'padding': hsize+6,
-                'margin-left': -((2*hsize+1)*15)/2,
+                'margin-left': -((2*hsize+1)*gameData.boardsize)/2,
                 'padding-left': 160+hsize,
                 'padding-right': 160+hsize,
-                'margin-top': -(hsize * 15 + 28)
+                'margin-top': -(hsize * gameData.boardsize + 28)
             });
             tds.css('padding',hsize);
             board.css({
