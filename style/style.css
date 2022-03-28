@@ -743,12 +743,13 @@ ul, li {
 	color: white;
 	border-radius: 4px;
 	border: none;
-	padding: 10px;
 	width: 320px;
 	font-size: 14px;
 	transition: all 0.4s ease-in-out;
 	opacity: 1;
+	height: 45px;
 	margin-left: 53px;
+	font-family: 'Gilroy_Bold';
 }
 .new-game:hover {
 	opacity: 0.8;
