@@ -888,6 +888,18 @@ button:focus, button:active {
 }
 
 /* responsive */
+@media (max-width: 870px) {
+	.game-wrapper {
+		display: block;
+	}
+	.game-wrapper #game-page {
+		width: 100%;
+	}
+	.game-wrapper .game-sidebar {
+		width: 50%;
+		margin: 30px auto;
+	}
+}
 @media (min-width: 1600px) 
 {
 	.container {

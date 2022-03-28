@@ -31,9 +31,9 @@ ai.setNum=0;
 ai.scoreMap=[];
 ai.scorequeue=[];
 ai.map=[];
-for (var i=0;i<gameData.boardsize;i++){
+for (var i=0;i<15;i++){
     var tmp=[];
-    for(var j=0;j<gameData.boardsize;j++){
+    for(var j=0;j<15;j++){
         var a=new mapPoint(i,j);
         tmp.push(a);
         ai.scorequeue.push(a);
@@ -117,16 +117,16 @@ ai._updateMap=function(r,c,num,remove){
         scores=this.scores,
         i=4,x,y,step,tmp,xx,yy,cur,changes=0,s,e;
     if(!remove){
-        boardBufArr[r * gameData.boardsize + c] = num + 2;
+        boardBufArr[r * 15 + c] = num + 2;
         this.map[r][c].set=num+1;
         while(i--){
             x=r;
             y=c;
             step=5;
-            while( step-- && x>=0 && y>=0 && y<gameData.boardsize ){
+            while( step-- && x>=0 && y>=0 && y<15 ){
                 xx=x-moves[i][0]*4;
                 yy=y-moves[i][1]*4;
-                if(xx>=gameData.boardsize || yy<0 || yy>=gameData.boardsize){
+                if(xx>=15 || yy<0 || yy>=15){
                     x+=moves[i][0];
                     y+=moves[i][1];
                     continue;
@@ -167,7 +167,7 @@ ai._updateMap=function(r,c,num,remove){
             }
         }
     }else{
-        boardBufArr[r * gameData.boardsize + c] = 0;
+        boardBufArr[r * 15 + c] = 0;
         this.map[r][c].set=false;
         while(i--){
             x=r;
@@ -176,10 +176,10 @@ ai._updateMap=function(r,c,num,remove){
             //others 0 i am 1-> sc=0
             //others 0 i am more than 1-> sc=1
             //i am >0 others >0 -> sc=-1
-            while( step-- && x>=0 && y>=0 && y<gameData.boardsize ){
+            while( step-- && x>=0 && y>=0 && y<15 ){
                 xx=x-moves[i][0]*4;
                 yy=y-moves[i][1]*4;
-                if(xx>=gameData.boardsize || yy<0 || yy>=gameData.boardsize){
+                if(xx>=15 || yy<0 || yy>=15){
                     x+=moves[i][0];
                     y+=moves[i][1];
                     continue;
