@@ -64,18 +64,18 @@ $(document).ready(function(){
             game.white.worker.terminate();
             game.black.worker.terminate();
         }catch(e){}
+        var color, other;
+        if(gameData.color=='black'){
+            color='black';
+            other='white';
+        }else{
+            color='white';
+            other='black';
+        }
         if(gameData.mode==='vshuman'){
             game.mode='hvh';
-            game.init(new HumanPlayer("white"), new HumanPlayer("black"));
+            game.init(new HumanPlayer(color), new HumanPlayer(other));
         }else{
-            var color, other;
-            if(gameData.color=='black'){
-                color='black';
-                other='white';
-            }else{
-                color='white';
-                other='black';
-            }
             game.mode=gameData.level;
             game.init(new HumanPlayer(color), new AIPlayer(game.mode, other));
         }
@@ -90,7 +90,21 @@ $(document).ready(function(){
             game.white.worker.terminate();
             game.black.worker.terminate();
         }catch(e){}
-        game.init();
+        var color, other;
+        if(gameData.color=='black'){
+            color='black';
+            other='white';
+        }else{
+            color='white';
+            other='black';
+        }
+        if(gameData.mode==='vshuman'){
+            game.mode='hvh';
+            game.init(new HumanPlayer(color), new HumanPlayer(other));
+        }else{
+            game.mode=gameData.level;
+            game.init(new HumanPlayer(color), new AIPlayer(game.mode, other));
+        }
     });
 
     $(".btn-playagain").on('click',function(){
@@ -98,18 +112,18 @@ $(document).ready(function(){
             game.white.worker.terminate();
             game.black.worker.terminate();
         }catch(e){}
+        var color, other;
+        if(gameData.color=='black'){
+            color='black';
+            other='white';
+        }else{
+            color='white';
+            other='black';
+        }
         if(gameData.mode==='vshuman'){
             game.mode='hvh';
-            game.init(new HumanPlayer("white"), new HumanPlayer("black"));
+            game.init(new HumanPlayer(color), new HumanPlayer(other));
         }else{
-            var color, other;
-            if(gameData.color=='black'){
-                color='black';
-                other='white';
-            }else{
-                color='white';
-                other='black';
-            }
             game.mode=gameData.level;
             game.init(new HumanPlayer(color), new AIPlayer(game.mode, other));
         }

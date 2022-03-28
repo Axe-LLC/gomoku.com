@@ -21,6 +21,9 @@ $(document).ready(function() {
         $("#orderLabel").trigger('click');
         $("#boardSizeLabel").trigger('click');
         $("#themeLabel").trigger('click');
+        $('#level-select input').attr('disabled', false);
+        $('#level-select label').removeClass('disabled');
+        $("#diffLabel").trigger('click');
     });
 
     $('#full-screen').on('click', function() {
