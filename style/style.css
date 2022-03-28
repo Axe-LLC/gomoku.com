@@ -888,6 +888,12 @@ button:focus, button:active {
 }
 
 /* responsive */
+@media (min-width: 1600px) 
+{
+	.container {
+		width: 1100px;
+	}
+}
 @media (max-width: 870px) {
 	.game-wrapper {
 		display: block;
@@ -900,9 +906,24 @@ button:focus, button:active {
 		margin: 30px auto;
 	}
 }
-@media (min-width: 1600px) 
-{
-	.container {
-		width: 1100px;
+
+@media (max-width: 520px) {
+	.game-wrapper {
+		display: block;
 	}
+	.game-wrapper #game-page {
+		width: 100%;
+	}
+	.game-wrapper .game-sidebar {
+		width: 100%;
+		margin: 30px auto;
+	}
+
+	.game-nav li { display: none; }
+	#undo-button { display: inline-block; }
+	.controller .container {
+		width: 100%;
+		margin: 0;
+	}
+	.nav { display: none; }
 }
