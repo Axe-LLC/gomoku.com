@@ -40,23 +40,23 @@ gameData={
 gameData.addRecord('firstTime','firstTime');
 
 gameData.addRecord('mode', 'vscomputer', function(val){
-    // $('#mode-select input[value="'+val+'"]').attr('checked',true);
+    $('#mode-select input[value="'+val+'"]').attr('checked',true);
     // $('#mode-select input[type="radio"]').checkboxradio('refresh');
 });
 gameData.addRecord('color', 'white', function(val){
-    // $('#mode-player input[value="'+val+'"]').attr('checked',true);
+    $('#mode-player input[value="'+val+'"]').attr('checked',true);
     // $('#color-select input[type="radio"]').checkboxradio('refresh');
 });
 gameData.addRecord('level', 'medium', function(val){
-    // $('#level-select input[value="'+val+'"]').attr('checked',true);
+    $('#level-select input[value="'+val+'"]').attr('checked',true);
     // $('#level-select input[type="radio"]').checkboxradio('refresh');
 });
 gameData.addRecord('boardsize', '15', function(val){
-    // $('#mode-boardsize input[value="'+val+'"]').attr('checked',true);
+    $('#mode-boardsize input[value="'+val+'"]').attr('checked',true);
     // $('#level-select input[type="radio"]').checkboxradio('refresh');
 });
 gameData.addRecord('theme', 'classic', function(val){
-    // $('#level-select input[value="theme-'+val+'"]').attr('checked',true);
+    $('#level-select input[value="theme-'+val+'"]').attr('checked',true);
     // $('#level-select input[type="radio"]').checkboxradio('refresh');
 });
 
