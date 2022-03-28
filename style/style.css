@@ -834,6 +834,60 @@ button:focus, button:active {
 #restart-game {
 	color: #FF0000;
 }
+/* board letter */
+#leftLetters,
+#rightLetters,
+#topLetters,
+#bottomLetters {
+	position: absolute;
+	z-index: 10;
+}
+#leftLetters span,
+#rightLetters span,
+#topLetters span,
+#bottomLetters span {
+	display: inline-block;
+	font-size: 10px;
+	color: white;
+}
+#leftLetters,
+#rightLetters {
+	width: 40px;
+	height: 100%;
+	bottom: 38px;
+	display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+#leftLetters {
+	left: 0;
+}
+#rightLetters {
+	right: 0;
+}
+#topLetters,
+#bottomLetters {
+	left: 40px;
+	width: 100%;
+	height: 40px;
+	display: flex;
+	align-items: center;
+}
+#topLetters {
+	top: 0;
+}
+#bottomLetters {
+	bottom: 0;
+}
+
+.theme-classic #leftLetters span,
+.theme-classic #rightLetters span,
+.theme-classic #topLetters span,
+.theme-classic #bottomLetters span {
+	color: #344861;
+}
+
+/* responsive */
 @media (min-width: 1600px) 
 {
 	.container {

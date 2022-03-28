@@ -50,5 +50,23 @@ function adjustSizeGen(){
                 'right': 160
             });
         }
+
+        /* board text */
+        $('#leftLetters').html('');
+        $('#rightLetters').html('');
+        $('#topLetters').html('');
+        $('#bottomLetters').html('');
+        var letters = [' ', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T'];
+
+        for(i=1; i<=gameData.boardsize; i++) {
+            $('#leftLetters').prepend('<span>' + i + '</span>');
+            $('#rightLetters').prepend('<span>' + i + '</span>');
+            $('#topLetters').append('<span>' + letters[i] + '</span>');
+            $('#bottomLetters').append('<span>' + letters[i] + '</span>');
+        }
+        $('#leftLetters span').css('padding-top', (hsize*2-13)+'px');
+        $('#rightLetters span').css('padding-top', (hsize*2-13)+'px');
+        $('#topLetters span').css('padding-right', (hsize*2-5)+'px');
+        $('#bottomLetters span').css('padding-right', (hsize*2-5)+'px');
     };
 }
