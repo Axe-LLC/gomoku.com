@@ -15,15 +15,15 @@ gameData={
         else{
             func=applyFunc;
         }
-        // Object.defineProperty(this, name, {
-        //     get: function(){
-        //         return localStorage[this.prefix+name];
-        //     },
-        //     set: function(val){
-        //         func(val);
-        //         localStorage[this.prefix+name] = val;
-        //     }
-        // });
+        Object.defineProperty(this, name, {
+            get: function(){
+                return localStorage[this.prefix+name];
+            },
+            set: function(val){
+                func(val);
+                localStorage[this.prefix+name] = val;
+            }
+        });
     },
     ini: function(){
         for(var i in this.records){
@@ -40,7 +40,7 @@ gameData={
 gameData.addRecord('firstTime','firstTime');
 
 gameData.addRecord('mode', 'vscomputer', function(val){
-    // $('#mode-select input[value="'+val+'"]').attr('checked',true);
+    $('#mode-select input[value="'+val+'"]').attr('checked',true);
     // $('#mode-select input[type="radio"]').checkboxradio('refresh');
 });
 gameData.addRecord('color', 'white', function(val){

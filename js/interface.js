@@ -48,8 +48,8 @@ $(document).ready(function(){
     });
 
     $('#mode-theme input[type="radio"]').on('change', function(){
-        gameData.theme='theme-' + $(this).val();
-        $('#main-page').attr('class', gameData.theme);
+        gameData.theme = $(this).val();
+        $('#main-page').attr('class', 'theme-' + gameData.theme);
     });
 
     function gameInit() {
@@ -73,6 +73,36 @@ $(document).ready(function(){
             game.init(new HumanPlayer(color), new AIPlayer(game.mode, other));
         }
     }
+
+    function gameInitSetting() {
+        /* mode */
+        $('#mode-select input[value="'+gameData.mode+'"]').attr('checked',true);
+        $('#mode-select label').removeClass('selected');
+        $('#mode-select input[value="'+gameData.mode+'"]').next().addClass('selected');
+
+        /* level */
+        $('#level-select input[value="'+gameData.level+'"]').attr('checked',true);
+        $('#level-select label').removeClass('selected');
+        $('#level-select input[value="'+gameData.level+'"]').next().addClass('selected');
+
+        /* player */
+        $('#mode-player input[value="'+gameData.color+'"]').attr('checked',true);
+        $('#mode-player label').removeClass('selected');
+        $('#mode-player input[value="'+gameData.color+'"]').next().addClass('selected');
+
+        /* board size */
+        $('#mode-boardsize input[value="'+gameData.boardsize+'"]').attr('checked',true);
+        $('#mode-boardsize label').removeClass('selected');
+        $('#mode-boardsize input[value="'+gameData.boardsize+'"]').next().addClass('selected');
+
+        /* theme */
+        $('#mode-theme input[value="'+gameData.theme+'"]').attr('checked',true);
+        $('#mode-theme label').removeClass('selected');
+        $('#mode-theme input[value="'+gameData.theme+'"]').next().addClass('selected');
+        
+        $('#main-page').attr('class', 'theme-' + gameData.theme);
+    }
+    gameInitSetting();
     
     $("#startGame").on('click',function(){
         $("#backdrop-over").show();

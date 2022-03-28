@@ -111,7 +111,6 @@ function Game(boardElm, boardBackgroundElm){
     };
 
     this.init = function(player1, player2){
-        console.log(player1, player2);
         this.rounds = 0;
         history = [];
         board.init();
