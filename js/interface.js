@@ -24,21 +24,25 @@ $(document).ready(function(){
         if( gameData.mode == 'vshuman' ) {
             $('#level-select input').attr('disabled', true);
             $('#level-select label').addClass('disabled');
+            $('#pc-icon').removeClass('blue');
+            $('#user-icon').addClass('blue');
         } else {
             $('#level-select input').attr('disabled', false);
             $('#level-select label').removeClass('disabled');
+            $('#pc-icon').addClass('blue');
+            $('#user-icon').removeClass('blue');
         }
     });
     
     $('#mode-player input[type="radio"]').on('click', function(){
         gameData.color=$(this).val();
-        if( $(this).val() == 'white' ) {
-            $('#pc-icon').removeClass('blue');
-            $('#user-icon').removeClass('blue');
-        } else {
-            $('#pc-icon').addClass('blue');
-            $('#user-icon').addClass('blue');
-        }
+        // if( $(this).val() == 'white' ) {
+        //     $('#pc-icon').removeClass('blue');
+        //     $('#user-icon').removeClass('blue');
+        // } else {
+        //     $('#pc-icon').addClass('blue');
+        //     $('#user-icon').addClass('blue');
+        // }
     });
     
     $('#level-select input[type="radio"]').on('change', function(){
@@ -89,6 +93,14 @@ $(document).ready(function(){
         $('#mode-select input[value="'+gameData.mode+'"]').attr('checked',true);
         $('#mode-select label').removeClass('selected');
         $('#mode-select input[value="'+gameData.mode+'"]').next().addClass('selected');
+
+        if( gameData.mode == 'vshuman' ) {
+            $('#pc-icon').removeClass('blue');
+            $('#user-icon').addClass('blue');
+        } else {
+            $('#pc-icon').addClass('blue');
+            $('#user-icon').removeClass('blue');
+        }
 
         /* level */
         $('#level-select input[value="'+gameData.level+'"]').attr('checked',true);

@@ -529,7 +529,7 @@ ul, li {
 }
 #game-setting h4 {
 	color: #344861;
-	font-size: 14px;
+	font-size: 12px;
 	font-family: 'Gilroy_Bold';
 }
 #game-setting .btn-group input,
@@ -571,6 +571,7 @@ ul, li {
 #level-select label {
 	padding: 11px 20px;
 	cursor: pointer;
+	font-size: 12px;
 	margin-bottom: 0;
 	font-family: 'Gilroy_Bold';
 	color: #8591A0;
