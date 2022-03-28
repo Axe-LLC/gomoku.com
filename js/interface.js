@@ -7,7 +7,7 @@ $(document).ready(function(){
         $('#game-page').height($('#game-page').width());
     $('#game-page').css('min-height', 'unset');
 
-    $('#backdrop-topmenu').hide();
+    $("#backdrop-over").hide();
 
     var game = new Game($(".go-board"), $(".board tbody"));
 
@@ -143,9 +143,9 @@ $(document).ready(function(){
 
     gameData.load();
 
-    setTimeout(function() {
-        $("#startGame").trigger('click');
-    }, 100);
+    // setTimeout(function() {
+    //     $("#startGame").trigger('click');
+    // }, 100);
 
     window.gameInfo = (function(){
         var blinking = false,
