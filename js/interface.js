@@ -51,7 +51,7 @@ $(document).ready(function(){
         gameData.theme='theme-' + $(this).val();
         $('#main-page').attr('class', gameData.theme);
     });
-    
+
     function gameInit() {
         try{
             game.white.worker.terminate();
