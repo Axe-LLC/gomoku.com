@@ -1,5 +1,10 @@
 $(document).ready(function() {
-    $('#game-page').height($('#game-page').width());
+    let w = $('#game-page').width();
+    let full = $(window).height() - 100;
+    if( w > full )
+        $('#game-page').height(full);
+    else
+        $('#game-page').height($('#game-page').width());
     $('#game-page').css('min-height', 'unset');
 
     $('.btn-group label').on('click', function() {
@@ -32,6 +37,11 @@ $(document).ready(function() {
 });
 
 $(window).resize(function() {
-    $('#game-page').height($('#game-page').width());
+    let w = $('#game-page').width();
+    let full = $(window).height() - 100;
+    if( w > full )
+        $('#game-page').height(full);
+    else
+        $('#game-page').height($('#game-page').width());
     $('#game-page').css('min-height', 'unset');
 });
