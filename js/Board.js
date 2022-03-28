@@ -103,6 +103,29 @@ var Board = function(boardElm, backgroundElm){
             frag.appendChild(places[r][c].elm[0]);
         }
     }
+
+    switch( gameData.boardsize ) {
+        case '9':
+            [[5, 5],[3, 3], [3, 5], [5, 3], [4, 4]].forEach(function(e) {
+                places[e[0]][e[1]].elm.addClass("go-darkdot");
+            });
+            break;
+        case '13':
+            [[6, 6],[3, 3], [3, 9], [9, 3], [9, 9]].forEach(function(e) {
+                places[e[0]][e[1]].elm.addClass("go-darkdot");
+            });
+            break;
+        case '15':
+            [[7, 7],[3, 3], [3, 11], [11, 3], [11, 11]].forEach(function(e) {
+                places[e[0]][e[1]].elm.addClass("go-darkdot");
+            });
+            break;
+        case '19':
+            [[9, 9],[3, 3], [3, 15], [15, 3], [15, 15]].forEach(function(e) {
+                places[e[0]][e[1]].elm.addClass("go-darkdot");
+            });
+            break;
+    }
     // [[7, 7],[3, 3], [3, 11], [11, 3], [11, 11]].forEach(function(e){
     //     places[e[0]][e[1]].elm.addClass("go-darkdot");
     // });
