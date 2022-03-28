@@ -1,12 +1,4 @@
 $(document).ready(function() {
-    let w = $('#game-page').width();
-    let full = $(window).height() - 200;
-    if( w > full )
-        $('#game-page').height(full);
-    else
-        $('#game-page').height($('#game-page').width());
-    $('#game-page').css('min-height', 'unset');
-
     $('.btn-group label').on('click', function() {
         $(this).parent().find('label').removeClass('selected');
         $(this).addClass('selected');

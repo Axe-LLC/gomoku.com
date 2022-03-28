@@ -1,4 +1,12 @@
 $(document).ready(function(){
+    let w = $('#game-page').width();
+    let full = $(window).height() - 200;
+    if( w > full )
+        $('#game-page').height(full);
+    else
+        $('#game-page').height($('#game-page').width());
+    $('#game-page').css('min-height', 'unset');
+    
     var game = new Game($(".go-board"), $(".board tbody"));
 
     var adjustSize = adjustSizeGen();
