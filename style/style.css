@@ -420,10 +420,14 @@ ul, li {
 	font-size: 28px;
 	margin-top: 6rem;
 	margin-bottom: 2rem;
+	font-family: 'Gilroy_Bold';
 }
 .page-content p {
 	font-size: 14px;
-	line-height: 22px;
+	line-height: 2;
+	color: #8591A0;
+	font-family: 'Gilroy';
+	font-weight: 600;
 }
 .page-content .desc {
 	background: #F3F6FA;
@@ -431,12 +435,16 @@ ul, li {
 	margin-bottom: 6rem;
 	padding: 1rem 3rem;
 }
+.page-content .desc h3 {
+	font-size: 24px;
+}
 .page-content .desc li {
 	list-style-type: disc;
-	color: #344861;
+	color: #8591A0;
 	font-size: 14px;
-	line-height: 22px;
-	margin: 10px 0 10px 2rem;
+	font-weight: 600;
+	line-height: 2;
+	margin: 20px 0 20px 2rem;
 }
 .page-content .desc li::marker {
 	font-size: 20px;
