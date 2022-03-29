@@ -19,3 +19,14 @@
           url('./font/Gilroy_Bold.svg#svgFontName') format('svg'); /* Legacy iOS */
       font-style: normal;
 }
+
+@font-face {
+    font-family: 'Gilroy_Medium';
+      src: url('./font/GILROY_MEDIUM.eot'); /* IE9 Compat Modes */
+      src: url('./font/GILROY_MEDIUM.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+          url('./font/GILROY_MEDIUM.woff2') format('woff2'), /* Super Modern Browsers */
+          url('./font/GILROY_MEDIUM.woff') format('woff'), /* Pretty Modern Browsers */
+          url('./font/GILROY_MEDIUM.ttf')  format('truetype'), /* Safari, Android, iOS */
+          url('./font/GILROY_MEDIUM.svg#svgFontName') format('svg'); /* Legacy iOS */
+      font-style: normal;
+}

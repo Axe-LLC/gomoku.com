@@ -438,8 +438,7 @@ ul, li {
 	font-size: 14px;
 	line-height: 2;
 	color: #8591A0;
-	font-family: 'Gilroy';
-	font-weight: 600;
+	font-family: 'Gilroy_Medium';
 }
 .page-content .desc {
 	background: #F3F6FA;
@@ -454,7 +453,7 @@ ul, li {
 	list-style-type: disc;
 	color: #8591A0;
 	font-size: 14px;
-	font-weight: 600;
+	font-family: 'Gilroy_Medium';
 	line-height: 2;
 	margin: 20px 0 20px 2rem;
 }
@@ -534,7 +533,7 @@ ul, li {
 	font-size: 12px;
 	line-height: 20px;
 	color: #344861;
-	font-weight: bold;
+	font-family: 'Gilroy_Medium';
 }
 #game-setting #backdrop-over p span {
 	color: #0072E3;
