@@ -138,18 +138,19 @@ $(document).ready(function(){
     });
 
     $('.btn-closepopup').on('click', function() {
-        gameInit();
-        $("#backdrop-over").hide();
-        $("#backdrop-topmenu").show();
-        $("#backdropgame-over").show();
-        $("#newGame").prop('disabled', true);
+        // gameInit();
+        // $("#backdrop-over").hide();
+        // $("#backdrop-topmenu").show();
+        // $("#backdropgame-over").show();
+        // $("#newGame").prop('disabled', true);
         stopConfetti();
     });
 
     $(".btn-playagain").on('click', function() {
         stopConfetti();
-        gameInit();
-        game.start();
+        // gameInit();
+        $("#newGame").trigger('click');
+        // game.start();
     });
 
     $("#undo-button").on('click', function(){
