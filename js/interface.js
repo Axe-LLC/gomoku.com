@@ -137,6 +137,14 @@ $(document).ready(function(){
         gameInit();
     });
 
+    $("#anotherNewGame").on('click',function(){
+        $("#backdrop-over").hide();
+        $("#backdrop-topmenu").show();
+        $("#backdropgame-over").show();
+        $(this).prop('disabled', true);
+        gameInit();
+    });
+
     $('.btn-closepopup').on('click', function() {
         // gameInit();
         // $("#backdrop-over").hide();
