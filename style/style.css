@@ -471,7 +471,7 @@ ul, li {
 	text-align: center;
 	color: #344861;
 	font-size: 14px;
-	line-height: 22px;
+	line-height: 2;
 	position: relative;
 }
 .privacy a {
@@ -1048,5 +1048,32 @@ button:focus, button:active {
 	#topLetters, #bottomLetters { 
 		height: 30px; 
 		left: 30px;
+	}
+	.page-content h3 {
+		font-size: 19px;
+	}
+	.page-content p {
+		font-size: 13px;
+		text-align: justify;
+	}
+	.page-content .desc h3 {
+		font-size: 16px;
+	}
+	.page-content .desc {
+		padding: 1rem 2rem;
+	}
+	.page-content .desc li {
+		font-size: 12px;
+	}
+	.privacy {
+		padding-top: 20px;
+	}
+	.privacy h4,
+	.privacy p {
+		font-size: 14px;
+		justify-content: center;
+	}
+	.privacy .container {
+		display: block !important;
 	}
 }
