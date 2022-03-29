@@ -78,7 +78,8 @@ AIPlayer.prototype = new Player();
 AIPlayer.prototype.myTurn = function(){
     Player.prototype.myTurn.call(this);
     this.game.toOthers();
-    gameInfo.setText("Thinking...");
+    gameInfo.setText("Thinking...<a href='#this'>aaa</a>");
+    return false;
     gameInfo.setBlinking(true);
     this.move();
 };
