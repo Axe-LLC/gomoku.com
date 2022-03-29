@@ -143,7 +143,17 @@ $(document).ready(function(){
         gameInit();
     });
 
-    $(".btn-playagain").on('click',function(){
+    $('.btn-closepopup').on('click', function() {
+        gameInit();
+        $("#backdrop-over").hide();
+        $("#backdrop-topmenu").show();
+        $("#backdropgame-over").show();
+        $("#newGame").prop('disabled', true);
+        stopConfetti();
+    });
+
+    $(".btn-playagain").on('click', function() {
+        stopConfetti();
         gameInit();
         game.start();
     });
@@ -218,10 +228,12 @@ function showWinDialog(game){
             $('#winTitle').html('Player 2 Wins <span class="black-tile"></span>');
             $('#winContent').html('Winner winner chicken dinner! Player 2 has won the<br /> game. Click the button below to start a new game.');
         }
+        startConfetti();
     } else {
         if(game.getCurrentPlayer() instanceof HumanPlayer) {
             $('#winTitle').html('You Win!!');
             $('#winContent').html('Winner winner chicken dinner! Congrats on your win. Click the button below to start a new game.');
+            startConfetti();
         } else {
             $('#winTitle').html('You Lost');
             $('#winContent').html('You lost. If the AI level was too difficult go down a notch or check our tips and trick to win!');

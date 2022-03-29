@@ -535,6 +535,13 @@ ul, li {
 	color: #344861;
 	font-family: 'Gilroy_Medium';
 }
+#confetti-canvas {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	z-index: 99;
+}
 #game-setting #backdrop-over p span {
 	color: #0072E3;
 }
@@ -873,6 +880,7 @@ ul, li {
 }
 #resultModal .modal-content {
 	border-radius: 10px;
+	z-index: 100;
 }
 .btn-playagain {
 	width: 180px;
