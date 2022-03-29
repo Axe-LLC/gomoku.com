@@ -79,7 +79,6 @@ AIPlayer.prototype.myTurn = function(){
     Player.prototype.myTurn.call(this);
     this.game.toOthers();
     gameInfo.setText("Thinking...<img src='images/thinking.png' width='30px'>");
-    return false;
     gameInfo.setBlinking(true);
     this.move();
 };
