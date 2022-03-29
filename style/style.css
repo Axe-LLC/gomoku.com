@@ -463,7 +463,7 @@ ul, li {
 /* privacy */
 .privacy {
 	background: #F3F6FA;
-	padding-top: 37px;
+	padding-top: 25px;
 	padding-bottom: 25px;
 	text-align: center;
 	color: #344861;
@@ -474,6 +474,21 @@ ul, li {
 .privacy a {
 	text-decoration: none;
 	color: #0072E3;
+}
+.privacy h4 {
+	font-size: 18px;
+	display: flex;
+	align-items: center;
+	color: #344861;
+	font-family: 'Gilroy_Bold';
+}
+.privacy p {
+	font-size: 16px;
+	color: #808E9E;
+	font-family: 'Gilroy';
+}
+.privacy h4 img {
+	margin-left: 16px;
 }
 .privacy .close {
 	position: absolute;
