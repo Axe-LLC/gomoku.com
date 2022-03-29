@@ -252,7 +252,9 @@ table.board {
 	-o-animation-direction: alternate;
 	animation-direction: alternate;
 }
-.black.go-board.playing .go-place:not(.set):hover>.go,.go-board .go-place.black>.go,#game-info>.go.black {
+.black.go-board.playing .go-place:not(.set):hover>.go,
+.go-board .go-place.black>.go,#game-info>.go.black,
+span.black-tile {
 	/* background: linear-gradient(211.18deg, #344861 19.7%, #344861 23.91%, #2F4861 75.88%); */
 	/* background: #4c596a;
 	background: -moz-radial-gradient(top right, #4c596a, #363f4c);
@@ -269,7 +271,9 @@ table.board {
 	-ms-transform: scale(0.9);
 	transform: scale(0.9);
 }
-.white.go-board.playing .go-place:not(.set):hover>.go,.go-board .go-place.white>.go,#game-info>.go.white {
+.white.go-board.playing .go-place:not(.set):hover>.go,
+.go-board .go-place.white>.go,#game-info>.go.white,
+span.white-tile {
 	/* background: linear-gradient(211.18deg, #0072E3 19.7%, #0072E3 23.91%, #0F5DAB 75.88%); */
 	/* background: white;
 	background: -moz-radial-gradient(top right, #fff, #ccc);
@@ -284,6 +288,14 @@ table.board {
 	-o-transform: scale(0.9);
 	-ms-transform: scale(0.9);
 	transform: scale(0.9);
+}
+span.white-tile,
+span.black-tile {
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	margin-left: 10px;
+	margin-top: 1px;
 }
 .go-board .go-place.black.last-move>.go {
 	box-shadow: rgb(255 255 255 / 30%) 0px -2px 15px inset, rgb(10 10 10 / 40%) -2px -1px 40px inset, rgb(0 0 0 / 50%) 0px 0px 2px, white 0px 0px 10px 3px;
@@ -837,14 +849,18 @@ ul, li {
 }
 /* modal */
 #resultModal .modal-dialog {
-	width: 390px;
+	width: 430px;
 	text-align: center;
 	margin: 15% auto;
 }
 #resultModal h2 {
 	color: #14142B;
 	font-size: 20px;
-	font-weight: bold;
+	font-family: 'Gilroy_Bold';
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 10px;
 }
 #resultModal p {
 	color: #4E4B66;
@@ -854,17 +870,28 @@ ul, li {
 	margin-bottom: 30px;
 }
 #resultModal .modal-body {
-	padding: 35px;
+	padding: 25px 35px;
 }
-.btn-home, 
-.btn-playagain {
-	width: 46%;
+#resultModal .modal-content {
 	border-radius: 10px;
-	padding: 10px;
+}
+.btn-playagain {
+	width: 180px;
+	border-radius: 6px;
+	height: 45px;
 	opacity: 1;
 	transition: all 0.4s ease-in-out;
 }
-.btn-home:hover, 
+.btn-closepopup {
+	border: none;
+	padding: 5px;
+	background: none;
+	color: #4E4B66;
+	font-size: 12px;
+	margin-top: 10px;
+	font-family: 'Gilroy_Bold';
+}
+.btn-closepopup:hover, 
 .btn-playagain:hover {
 	opacity: 0.8;
 }

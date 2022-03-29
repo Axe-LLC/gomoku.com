@@ -210,6 +210,23 @@ $(document).ready(function(){
 
 function showWinDialog(game){
     gameInfo.setBlinking(false);
+    if( game.mode == 'hvh' ) {
+        if( game.getCurrentPlayer().color == 'white' ) {
+            $('#winTitle').html('Player 1 Wins <span class="white-tile"></span>');
+            $('#winContent').html('Winner winner chicken dinner! Player 1 has won the<br /> game. Click the button below to start a new game.');
+        } else {
+            $('#winTitle').html('Player 2 Wins <span class="black-tile"></span>');
+            $('#winContent').html('Winner winner chicken dinner! Player 2 has won the<br /> game. Click the button below to start a new game.');
+        }
+    } else {
+        if(game.getCurrentPlayer() instanceof HumanPlayer) {
+            $('#winTitle').html('You Win!!');
+            $('#winContent').html('Winner winner chicken dinner! Congrats on your win. Click the button below to start a new game.');
+        } else {
+            $('#winTitle').html('You Lost');
+            $('#winContent').html('You lost. If the AI level was too difficult go down a notch or check our tips and trick to win!');
+        }
+    }
     $('#resultModal').modal({
         backdrop: 'static',
         keyboard: false
