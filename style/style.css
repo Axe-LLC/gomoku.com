@@ -486,6 +486,11 @@ ul, li {
 	font-size: 16px;
 	color: #808E9E;
 	font-family: 'Gilroy';
+	margin: 0;
+	line-height: unset;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
 }
 .privacy h4 img {
 	margin-left: 16px;
@@ -545,9 +550,9 @@ ul, li {
 }
 #game-setting #backdrop-over p {
 	text-align: center;
-	font-size: 12px;
-	line-height: 20px;
-	color: #344861;
+	font-size: 14px;
+	line-height: 2;
+	color: #8591A0;
 	font-family: 'Gilroy_Medium';
 }
 #confetti-canvas {
@@ -884,9 +889,9 @@ ul, li {
 	margin-top: 10px;
 }
 #resultModal p {
-	color: #4E4B66;
-	font-size: 12px;
-	line-height: 20px;
+	color: #8591A0;
+	font-size: 14px;
+	line-height: 2;
 	margin-top: 20px;
 	margin-bottom: 30px;
 }
