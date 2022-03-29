@@ -375,6 +375,9 @@ ul, li {
 	padding: 0;
 	margin: 0;
 }
+.header .container .nav {
+	display: none;
+}
 .header .container .nav li {
 	display: inline-block;
 	margin-left: 20px;
@@ -476,11 +479,12 @@ ul, li {
 	color: #0072E3;
 }
 .privacy h4 {
-	font-size: 18px;
+	font-size: 16px;
 	display: flex;
 	align-items: center;
 	color: #344861;
 	font-family: 'Gilroy_Bold';
+	font-weight: bold;
 }
 .privacy p {
 	font-size: 16px;
@@ -786,7 +790,7 @@ ul, li {
 	transition: all 0.4s ease-in-out;
 	opacity: 1;
 	height: 45px;
-	margin-left: 53px;
+	margin-left: 9px;
 	font-family: 'Gilroy_Bold';
 }
 .new-game:hover {
@@ -894,6 +898,7 @@ ul, li {
 	line-height: 2;
 	margin-top: 20px;
 	margin-bottom: 30px;
+	font-family: 'Gilroy_Medium';
 }
 #resultModal .modal-body {
 	padding: 25px 35px;
@@ -908,12 +913,13 @@ ul, li {
 	height: 45px;
 	opacity: 1;
 	transition: all 0.4s ease-in-out;
+	font-family: 'Gilroy_Bold';
 }
 .btn-closepopup {
 	border: none;
 	padding: 5px;
 	background: none;
-	color: #4E4B66;
+	color: #8591A0;
 	font-size: 12px;
 	margin-top: 10px;
 	font-family: 'Gilroy_Bold';
