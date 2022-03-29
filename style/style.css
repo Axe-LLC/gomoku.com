@@ -301,7 +301,7 @@ span.black-tile {
 	box-shadow: rgb(255 255 255 / 30%) 0px -2px 15px inset, rgb(10 10 10 / 40%) -2px -1px 40px inset, rgb(0 0 0 / 50%) 0px 0px 2px, white 0px 0px 10px 3px;
 }
 .go-board .go-place.white.last-move>.go {
-	box-shadow: rgb(255 255 255 / 30%) 0px -2px 15px inset, rgb(10 10 10 / 40%) -2px -1px 40px inset, rgb(0 0 0 / 50%) 0px 0px 2px, white 0px 0px 10px 3px;
+	box-shadow: rgb(255 255 255 / 30%) 0px -2px 15px inset, rgb(10 10 10 / 25%) -2px -1px 40px inset, rgb(0 0 0 / 20%) 0px 0px 2px, white 0px 0px 10px 3px;
 }
 .go-board .go-place.set>.go { top: 0; }
 .go-board.playing .go-place:not(.set):hover>.go {
@@ -1075,5 +1075,8 @@ button:focus, button:active {
 	}
 	.privacy .container {
 		display: block !important;
+	}
+	.controller {
+		min-width: unset;
 	}
 }
