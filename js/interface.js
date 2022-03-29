@@ -10,6 +10,7 @@ $(document).ready(function(){
     $("#backdrop-over").hide();
 
     var game = new Game($(".go-board"), $(".board tbody"));
+    var smallScreen = $(window).width()>520?false:true;
 
     var adjustSize = adjustSizeGen();
 
@@ -36,13 +37,6 @@ $(document).ready(function(){
     
     $('#mode-player input[type="radio"]').on('click', function(){
         gameData.color=$(this).val();
-        // if( $(this).val() == 'white' ) {
-        //     $('#pc-icon').removeClass('blue');
-        //     $('#user-icon').removeClass('blue');
-        // } else {
-        //     $('#pc-icon').addClass('blue');
-        //     $('#user-icon').addClass('blue');
-        // }
     });
     
     $('#level-select input[type="radio"]').on('change', function(){
@@ -243,27 +237,9 @@ function showWinDialog(game){
         backdrop: 'static',
         keyboard: false
     });
-    // if(game.mode === 'hvh'){
-    //     var who=(function(string){ return string.charAt(0).toUpperCase() + string.slice(1);})(game.getCurrentPlayer().color);
-    //     $("#game-won h4").html(who+' Won!');
-    //     gameInfo.value=who+' won.'
-    //     $("#win-content").html(who+' won the game. Play again?');
-    //     $('#happy-outer').fadeIn(500);
-    // }else{
-    //     if(game.getCurrentPlayer() instanceof HumanPlayer){
-    //         $("#game-won h4").html('You Won!');
-    //         $("#win-content").html('You won the game. Play again?');
-    //         gameInfo.value='You won.'
-    //         $('#sad-outer').fadeIn(500);
-    //     }else{
-    //         $("#game-won h4").html('You Lost.');
-    //         $("#win-content").html('Meh. You lost to the computer. Play again?');
-    //         gameInfo.value='Computer won.'
-    //         $('#happy-outer').fadeIn(500);
-    //     }
-    // }
 }
 
 $(window).resize(function() {
     adjustSizeGen();
+    var smallScreen = $(window).width()>520?false:true;
 });

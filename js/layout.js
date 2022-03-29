@@ -1,11 +1,11 @@
 function adjustSizeGen(){
     // var smallScreen = navigator.userAgent.toLowerCase().match(/(iphone|ipod|android)/);
-    var smallScreen = $(window).width()>520?false:true;
 
     var gameRegion = $("#game-region"),
         tds = $('.board td'),
         board = $('.go-board');
     return function(){
+        var smallScreen = $(window).width()>520?false:true;
         var avaih = $('#game-page').height(),
             avaiw = $('#game-page').width(),
             h = Math.max(avaih - 40, avaih * 0.98 - 40),

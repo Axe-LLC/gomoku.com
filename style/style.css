@@ -1079,4 +1079,7 @@ button:focus, button:active {
 	.controller {
 		min-width: unset;
 	}
+	#backdrop-topmenu {
+		display: none;
+	}
 }
