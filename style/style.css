@@ -1009,7 +1009,10 @@ button:focus, button:active {
 	.container { width: 950px; }
 }
 @media (max-width: 769px) {
-	.game-wrapper { display: block; }
+	.game-wrapper { 
+		display: block; 
+		padding-bottom: 0;
+	}
 	.game-wrapper #game-page { width: 100%; }
 	.game-wrapper .game-sidebar {
 		width: 100%;

@@ -23,8 +23,8 @@ function adjustSizeGen(){
             //     hspace = avaih - 40;
             //     vspace = 0;
             // }
-            h = Math.max(avaih - 30, avaih * 0.98 - 30);
-            w = Math.max(avaiw - 30, avaih * 0.98 - 30);
+            h = Math.max(avaih, avaih * 0.98);
+            w = Math.max(avaiw, avaih * 0.98);
             vspace = Math.min(h, w);
             hspace = Math.min(w, h - 30);
         }
