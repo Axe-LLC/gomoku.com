@@ -155,6 +155,8 @@ $(document).ready(function(){
         $('#game-setting').hide('normal');
         $('body').removeClass('overflow-hidden');
         $('#backdropgame-over').hide();
+        gameInit();
+        game.start();
     });
 
     $('.btn-closepopup').on('click', function() {
