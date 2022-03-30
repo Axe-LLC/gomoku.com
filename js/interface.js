@@ -1,6 +1,6 @@
 $(document).ready(function(){
     let w = $('#game-page').width();
-    let full = $(window).height() - 200;
+    let full = $(window).height() - 120;
     if( w > full )
         $('#game-page').height(full);
     else
@@ -10,7 +10,7 @@ $(document).ready(function(){
     $("#backdrop-over").hide();
 
     var game = new Game($(".go-board"), $(".board tbody"));
-    var smallScreen = $(window).width()>520?false:true;
+    var smallScreen = $(window).width()>768?false:true;
 
     var adjustSize = adjustSizeGen();
 
@@ -120,7 +120,7 @@ $(document).ready(function(){
     }
     gameInitSetting();
     
-    $("#startGame").on('click',function(){
+    $("#startGame").on('click', function(){
         $("#backdrop-over").show();
         $("#backdropgame-over").hide();
         $("#backdrop-topmenu").hide();
@@ -129,7 +129,7 @@ $(document).ready(function(){
         game.start();
     });
 
-    $("#newGame").on('click',function(){
+    $("#newGame").on('click', function(){
         $("#backdrop-over").hide();
         $("#backdrop-topmenu").show();
         $("#backdropgame-over").show();
@@ -137,12 +137,24 @@ $(document).ready(function(){
         gameInit();
     });
 
-    $("#anotherNewGame").on('click',function(){
+    $("#anotherNewGame").on('click', function(){
         $("#backdrop-over").hide();
         $("#backdrop-topmenu").show();
         $("#backdropgame-over").show();
         $(this).prop('disabled', true);
         gameInit();
+    });
+
+    $("#mobileNewGame").on('click', function() {
+        $('#game-setting').show('normal');
+        $('body').addClass('overflow-hidden');
+        gameInit();
+    });
+
+    $("#mobileStartGame").on('click', function() {
+        $('#game-setting').hide('normal');
+        $('body').removeClass('overflow-hidden');
+        $('#backdropgame-over').hide();
     });
 
     $('.btn-closepopup').on('click', function() {
@@ -250,5 +262,5 @@ function showWinDialog(game){
 
 $(window).resize(function() {
     adjustSizeGen();
-    var smallScreen = $(window).width()>520?false:true;
+    var smallScreen = $(window).width()>768?false:true;
 });

@@ -5,7 +5,7 @@ function adjustSizeGen(){
         tds = $('.board td'),
         board = $('.go-board');
     return function(){
-        var smallScreen = $(window).width()>520?false:true;
+        var smallScreen = $(window).width()>768?false:true;
         var avaih = $('#game-page').height(),
             avaiw = $('#game-page').width(),
             h = Math.max(avaih - 40, avaih * 0.98 - 40),
