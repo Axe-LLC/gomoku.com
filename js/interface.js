@@ -12,6 +12,9 @@ $(document).ready(function(){
     var game = new Game($(".go-board"), $(".board tbody"));
     var smallScreen = $(window).width()>768?false:true;
 
+    if( smallScreen )
+        $('.controller').hide();
+
     var adjustSize = adjustSizeGen();
 
     $(window).resize(adjustSize);

@@ -1050,9 +1050,10 @@ button:focus, button:active {
 	.privacy .container { display: block !important; }
 	.controller { 
 		min-width: unset; 
-		display: none; 
+		display: flex; 
 		border-top: none;
-		height: auto;
+		height: 40px;
+		margin-bottom: 20px;
 	}
 	#backdrop-topmenu { display: none; }
 	.page-content .desc li { text-align: justify; }
