@@ -35,7 +35,7 @@ function adjustSizeGen(){
             gameRegion.css({
                 'padding': 30,
             });
-            tds.css('padding',hsize-1);
+            tds.css('padding',hsize-0.7);
             board.css({
                 'left': 36 - hsize,
                 'right': 36 - hsize,
