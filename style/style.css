@@ -746,6 +746,8 @@ ul, li {
 	justify-content: center;
 	align-items: center;
 	margin-top: 40px;
+	font-family: 'Gilroy_Bold';
+	font-size: 14px;
 }
 .game-sidebar hr {
 	border-color: #E5EBF2;
