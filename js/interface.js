@@ -169,6 +169,24 @@ $(document).ready(function(){
         // $("#backdrop-topmenu").show();
         // $("#backdropgame-over").show();
         // $("#newGame").prop('disabled', true);
+
+        var showText = 'You Lost';
+
+        if( game.mode == 'hvh' ) {
+            if( game.getCurrentPlayer().color == 'white' ) {
+                showText = "Player 1 Wins <embed src='images/top_ico2.svg' width='30px'><embed src='images/top_ico2.svg' width='30px'>";
+            } else {
+                showText = "Player 2 Wins <embed src='images/top_ico2.svg' width='30px'><embed src='images/top_ico2.svg' width='30px'>";
+            }
+            startConfetti();
+        } else {
+            if(game.getCurrentPlayer() instanceof HumanPlayer) {
+                showText = "You Wins <embed src='images/top_ico2.svg' width='30px'><embed src='images/top_ico2.svg' width='30px'>";
+                startConfetti();
+            }
+        }
+        
+        gameInfo.setText(showText);
         stopConfetti();
     });
 

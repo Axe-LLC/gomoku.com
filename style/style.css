@@ -999,6 +999,14 @@ button:focus, button:active {
 .theme-classic #bottomLetters span { color: #344861; }
 .mobile-top-btn { display: none; }
 .overflow-hidden { overflow: hidden !important; }
+#game-info .cont {
+	display: flex;
+	align-items: center;
+}
+#game-info .cont img,
+#game-info .cont embed {
+	margin-left: 10px;
+}
 
 /* responsive */
 @media (min-width: 1600px) 
