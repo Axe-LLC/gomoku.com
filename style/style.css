@@ -783,6 +783,11 @@ ul, li {
 	right: 10px;
 	color: black;
 }
+.game-nav,
+.game-nav ul {
+	display: flex;
+	align-items: center;
+}
 .game-nav li {
 	display: inline-block;
 	margin-left: 30px;
@@ -1009,6 +1014,7 @@ button:focus, button:active {
 #game-info .cont embed {
 	margin-left: 10px;
 }
+#undo-button.disabled { color: #8591A0; }
 
 /* responsive */
 @media (min-width: 1600px) 
@@ -1096,8 +1102,7 @@ button:focus, button:active {
 		width: auto;
 		margin: 25% 15px;
 	}
-	.game-nav {
-		display: flex;
-		align-items: center;
+	#resultModal p br {
+		display: none;
 	}
 }

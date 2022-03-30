@@ -201,8 +201,9 @@ $(document).ready(function(){
         // game.start();
     });
 
-    $("#undo-button").on('click', function(){
+    $("#undo-button").on('click', function() {
         if( $("#newGame").prop('disabled') ) return false;
+        $("#undo-button").removeClass('disabled');
         game.undo();
     });
 
@@ -262,6 +263,7 @@ $(document).ready(function(){
 });
 
 function showWinDialog(game){
+    $("#undo-button").addClass('disabled');
     gameInfo.setBlinking(false);
     if( game.mode == 'hvh' ) {
         if( game.getCurrentPlayer().color == 'white' ) {
