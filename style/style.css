@@ -432,7 +432,7 @@ ul, li {
 	color: #344861;
 }
 .page-content h3 {
-	font-size: 28px;
+	font-size: 26px;
 	margin-top: 6rem;
 	margin-bottom: 2rem;
 	font-family: 'Gilroy_Bold';
@@ -450,7 +450,7 @@ ul, li {
 	padding: 1rem 3rem;
 }
 .page-content .desc h3 {
-	font-size: 24px;
+	font-size: 26px;
 }
 .page-content .desc li {
 	list-style-type: disc;
@@ -1095,5 +1095,9 @@ button:focus, button:active {
 	#resultModal .modal-dialog {
 		width: auto;
 		margin: 25% 15px;
+	}
+	.game-nav {
+		display: flex;
+		align-items: center;
 	}
 }
