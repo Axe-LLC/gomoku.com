@@ -172,7 +172,10 @@ $(document).ready(function(){
     $(".btn-playagain").on('click', function() {
         stopConfetti();
         // gameInit();
-        $("#newGame").trigger('click');
+        if( smallScreen )
+            $("#mobileNewGame").trigger('click');
+        else
+            $("#newGame").trigger('click');
         // game.start();
     });
 
