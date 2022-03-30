@@ -1045,7 +1045,12 @@ button:focus, button:active {
 		justify-content: center;
 	}
 	.privacy .container { display: block !important; }
-	.controller { min-width: unset; }
+	.controller { 
+		min-width: unset; 
+		display: none; 
+		border-top: none;
+		height: auto;
+	}
 	#backdrop-topmenu { display: none; }
 	.page-content .desc li { text-align: justify; }
 	#game-setting {
@@ -1063,6 +1068,7 @@ button:focus, button:active {
 		display: block;
 		background: #F7FAFF;
 		padding: 12px 0;
+		margin-bottom: 20px;
 	}
 	.mobile-top-btn button { width: 100%; }
 	.controller { background: none; }
@@ -1071,5 +1077,9 @@ button:focus, button:active {
 	.container {
 		padding-left: 20px;
 		padding-right: 20px;
+	}
+	#resultModal .modal-dialog {
+		width: auto;
+		margin: 25% 15px;
 	}
 }

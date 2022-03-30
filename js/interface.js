@@ -152,6 +152,7 @@ $(document).ready(function(){
     });
 
     $("#mobileStartGame").on('click', function() {
+        $('.controller').show();
         $('#game-setting').hide('normal');
         $('body').removeClass('overflow-hidden');
         $('#backdropgame-over').hide();
