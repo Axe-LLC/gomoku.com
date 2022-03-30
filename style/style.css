@@ -735,7 +735,7 @@ ul, li {
 	opacity: 0.85;
 	transition: 0.3s all ease-in-out;
 }
-.mobile-show { display: none; }
+#game-setting .btn-group.mobile-show { display: none; }
 #game-setting .btn-group button.start-btn {
 	background: #0072E3;
 	color: white;
@@ -1077,7 +1077,7 @@ button:focus, button:active {
 	.mobile-top-btn button { width: 100%; }
 	.controller { background: none; }
 	#game-setting { display: none; }
-	.mobile-show { display: block; }
+	#game-setting .btn-group.mobile-show { display: block; }
 	.container {
 		padding-left: 20px;
 		padding-right: 20px;
