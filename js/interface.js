@@ -92,6 +92,8 @@ $(document).ready(function(){
         $('#mode-select input[value="'+gameData.mode+'"]').next().addClass('selected');
 
         if( gameData.mode == 'vshuman' ) {
+            $('#level-select input').attr('disabled', true);
+            $('#level-select label').addClass('disabled');
             $('#pc-icon').removeClass('blue');
             $('#user-icon').addClass('blue');
         } else {
