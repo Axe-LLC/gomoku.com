@@ -226,7 +226,11 @@ $(document).ready(function(){
         // $("#newGame").prop('disabled', true);
 
         var showText = 'You Lost';
-        $('.player-status').show();
+        var isMobile = $(window).width()>768?false:true;
+        if( isMobile ) {
+            $('.player-status').show();
+        }
+        isStarted = false;
 
         if( game.mode == 'hvh' ) {
             if( game.getCurrentPlayer().color == 'white' ) {
@@ -260,7 +264,7 @@ $(document).ready(function(){
     });
 
     $("#undo-button").on('click', function() {
-        if( $("#newGame").prop('disabled') ) return false;
+        if( isStarted == false ) return false;
         $("#undo-button").removeClass('disabled');
         game.undo();
     });
