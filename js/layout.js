@@ -35,7 +35,15 @@ function adjustSizeGen(){
             gameRegion.css({
                 'padding': 30,
             });
-            tds.css('padding',hsize-0.7);
+            if( $(window).width() > 370 && $(window).width() < 390 ) {
+                tds.css('padding',hsize-1.3);
+            } else if( $(window).width() > 390 && $(window).width() < 401 ) {
+                tds.css('padding',hsize-1.7);
+            } else if( $(window).width() > 400 && $(window).width() < 415 ) {
+                tds.css('padding',hsize-1);
+            } else {
+                tds.css('padding',hsize-0.8);
+            }
             board.css({
                 'left': 36 - hsize,
                 'right': 36 - hsize,
@@ -88,6 +96,12 @@ function adjustSizeGen(){
             $('#rightLetters span').css('padding-top', (hsize*2-15)+'px');
             $('#topLetters span').css('padding-right', (hsize*2-7)+'px');
             $('#bottomLetters span').css('padding-right', (hsize*2-7)+'px');
+            if( $(window).width() > 391 && $(window).width() < 401 ) {
+                $('#leftLetters span').css('padding-top', (hsize*2-17)+'px');
+                $('#rightLetters span').css('padding-top', (hsize*2-17)+'px');
+                $('#topLetters span').css('padding-right', (hsize*2-9)+'px');
+                $('#bottomLetters span').css('padding-right', (hsize*2-9)+'px');
+            }
         } else {
             $('#leftLetters span').css('padding-top', (hsize*2-13)+'px');
             $('#rightLetters span').css('padding-top', (hsize*2-13)+'px');
