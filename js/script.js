@@ -39,7 +39,7 @@ $(document).ready(function() {
 
 $(window).resize(function() {
     let w = $('#game-page').width();
-    let full = $(window).height() - 120;
+    let full = $(window).height() - 180;
     if( w > full )
         $('#game-page').height(full);
     else

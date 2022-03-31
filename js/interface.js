@@ -2,29 +2,29 @@ var isStarted = false;
 
 $(document).ready(function(){
     let w = $('#game-page').width();
-    let full = $(window).height() - 120;
+    let full = $(window).height() - 180;
     if( w > full )
         $('#game-page').height(full);
     else
         $('#game-page').height($('#game-page').width());
     $('#game-page').css('min-height', 'unset');
 
-    $('#newGame').width($('#backdrop-over').width());
-
-    $("#backdrop-over").hide();
-    $('.player-status').hide();
-
     var game = new Game($(".go-board"), $(".board tbody"));
     var smallScreen = $(window).width()>768?false:true;
-
-    if( smallScreen )
-        $('.controller').hide();
 
     var adjustSize = adjustSizeGen();
 
     $(window).resize(adjustSize);
 
     adjustSize();
+
+    $('#newGame').width($('#backdrop-over').width());
+
+    $("#backdrop-over").hide();
+    $('.player-status').hide();
+
+    if( smallScreen )
+        $('.controller').hide();
     // $.mobile.defaultDialogTransition = 'flip';
     // $.mobile.defaultPageTransition = 'flip';
     
