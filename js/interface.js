@@ -12,6 +12,7 @@ $(document).ready(function(){
     $('#newGame').width($('#backdrop-over').width());
 
     $("#backdrop-over").hide();
+    $('.player-status').hide();
 
     var game = new Game($(".go-board"), $(".board tbody"));
     var smallScreen = $(window).width()>768?false:true;
@@ -126,6 +127,19 @@ $(document).ready(function(){
         $('#mode-theme input[value="'+gameData.theme+'"]').next().addClass('selected');
 
         $('#main-page').attr('class', 'theme-' + gameData.theme);
+
+        if( game.mode == 'hvh' ) {
+            $('.player-status .first').prepend('<span class="user-large-ico"></span>');
+            $('.player-status .second').prepend('<span class="user-large-ico"></span>');
+        } else {
+            if(gameData.color=='white') {
+                $('.player-status .first').prepend('<span class="user-large-ico"></span>');
+                $('.player-status .second').prepend('<span class="pc-large-ico"></span>');
+            } else {
+                $('.player-status .first').prepend('<span class="pc-large-ico"></span>');
+                $('.player-status .second').prepend('<span class="user-large-ico"></span>');
+            }
+        }
     }
     gameInitSetting();
     
@@ -162,6 +176,7 @@ $(document).ready(function(){
         $('#game-setting').show('normal');
         $('body').addClass('overflow-hidden');
         $("#backdropgame-over").show();
+        $('.player-status').hide();
         isStarted = false;
         gameInit();
     });
@@ -173,6 +188,7 @@ $(document).ready(function(){
         $('body').removeClass('overflow-hidden');
         $('#backdropgame-over').hide();
         $("#backdrop-topmenu").hide();
+        $('.player-status').show();
         $("#newGame").prop('disabled', false);
         isStarted = true;
         gameInit();
@@ -187,6 +203,7 @@ $(document).ready(function(){
         // $("#newGame").prop('disabled', true);
 
         var showText = 'You Lost';
+        $('.player-status').show();
 
         if( game.mode == 'hvh' ) {
             if( game.getCurrentPlayer().color == 'white' ) {
@@ -210,10 +227,12 @@ $(document).ready(function(){
         stopConfetti();
         // gameInit();
         var isMobile = $(window).width()>768?false:true;
-        if( isMobile )
+        if( isMobile ) {
             $("#mobileNewGame").trigger('click');
-        else
+            $('.player-status').show();
+        } else {
             $("#newGame").trigger('click');
+        }
         // game.start();
     });
 
@@ -313,6 +332,7 @@ $(window).resize(function() {
     if( smallScreen === false ) {
         $('#game-setting').show();
         $('.controller').show();
+        $('.player-status').hide();
         if( isStarted === true ) {
             $('#backdrop-over').show();
         } else {
@@ -324,6 +344,7 @@ $(window).resize(function() {
             $('.controller').hide();
         } else {
             $('#game-setting').hide();
+            $('.player-status').show();
         }
         // $('#game-setting').hide();
         $('#backdrop-over').hide();

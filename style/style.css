@@ -735,6 +735,7 @@ ul, li {
 	opacity: 0.85;
 	transition: 0.3s all ease-in-out;
 }
+.mobile-show,
 #game-setting .btn-group.mobile-show { display: none; }
 #anotherNewGame { cursor: pointer; }
 #game-setting .btn-group button.start-btn {
@@ -849,6 +850,20 @@ ul, li {
 	background: #F7FAFF;
 	border: 1px solid #344861;
 }
+
+.pc-large-ico {
+	width: 29px;
+	height: 27px;
+	background: url('images/ico-pc.svg') center center;
+	background-size: cover;
+}
+.user-large-ico {
+	width: 23px;
+	height: 23px;
+	background: url('images/ico-user.svg') center center;
+	background-size: cover;
+}
+
 /* old */
 .theme-old #game-region {
 	background: linear-gradient(222.87deg, #8B745F 1.77%, #745B5B 92.7%);
@@ -1036,6 +1051,7 @@ button:focus, button:active {
 	.game-wrapper { 
 		display: block; 
 		padding-bottom: 0;
+		border-bottom: none;
 	}
 	.game-wrapper #game-page { width: 100%; }
 	.game-wrapper .game-sidebar {
@@ -1110,10 +1126,39 @@ button:focus, button:active {
 		width: auto;
 		margin: 25% 15px;
 	}
-	#resultModal p br {
-		display: none;
+	#resultModal p br { display: none; }
+	#game-setting #backdrop-over { display: none; }
+	.player-status { 
+		display: flex; 
+		justify-content: space-between;
+		align-items: center;
 	}
-	#game-setting #backdrop-over {
-		display: none;
+	.player-status div {
+		width: 46%;
+		height: 50px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: #F7FAFF;
+	}
+	.player-status div.first span.tile {
+		width: 19px;
+		height: 19px;
+		margin-right: 10px;
+		margin-left: 10px;
+		border-radius: 50%;
+		background: -moz-radial-gradient(closest-corner at 30% 25%, rgb(238, 238, 238), rgb(187, 187, 187));
+		background: radial-gradient(closest-corner at 30% 25%, rgb(238, 238, 238), rgb(187, 187, 187));
+		background: -webkit-radial-gradient(closest-corner at 30% 25%, rgb(238, 238, 238), rgb(187, 187, 187));
+	}
+	.player-status div.second span.tile {
+		width: 19px;
+		height: 19px;
+		margin-right: 10px;
+		margin-left: 10px;
+		border-radius: 50%;
+		background: -moz-radial-gradient(closest-corner at 30% 25%, rgb(119, 119, 119), rgb(34, 34, 34));
+		background: radial-gradient(closest-corner at 30% 25%, rgb(119, 119, 119), rgb(34, 34, 34));
+		background: -webkit-radial-gradient(closest-corner at 30% 25%, rgb(119, 119, 119), rgb(34, 34, 34));
 	}
 }
