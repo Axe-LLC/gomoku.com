@@ -18,7 +18,7 @@ $(document).ready(function(){
 
     adjustSize();
 
-    $('#newGame').width($('#backdrop-over').width()-10);
+    $('#newGame').width($('#startGame').width());
 
     $("#backdrop-over").hide();
     $('.player-status').hide();
@@ -177,6 +177,8 @@ $(document).ready(function(){
         $("#backdrop-over").hide();
         $("#backdrop-topmenu").show();
         $("#backdropgame-over").show();
+        $("#secondLoading").hide();
+        $("#firstLoading").show();
         $(this).prop('disabled', true);
         isStarted = false;
         gameInit();
@@ -353,7 +355,7 @@ function showWinDialog(game){
 }
 
 $(window).resize(function() {
-    $('#newGame').width($('#backdrop-over').width()-10);
+    $('#newGame').width($('#startGame').width());
     adjustSizeGen();
     var smallScreen = $(window).width()>768?false:true;
     if( smallScreen === false ) {

@@ -546,14 +546,33 @@ ul, li {
 }
 #game-setting #backdrop-over {
 	opacity: 1;
-	display: flex;
+	/* display: flex;
 	justify-content: center;
-	align-items: center;
+	align-items: center; */
+	display: block;
 	border: 1px solid #E5EBF2;
 	border-radius: 10px;
 }
+#game-setting #backdrop-over div {
+	padding: 20px;
+}
+#game-setting #backdrop-over h3 {
+	font-size: 18px;
+	color: #344861;
+	font-family: 'Gilroy_Bold';
+	line-height: 20px;
+	margin-bottom: 25px;
+	display: flex;
+	align-items: center;
+}
+#game-setting #backdrop-over h3 embed {
+	margin-left: 10px;
+}
+#game-setting #backdrop-over #secondLoading {
+	display: none;
+}
 #game-setting #backdrop-over p {
-	text-align: center;
+	text-align: left;
 	font-size: 14px;
 	line-height: 2;
 	color: #8591A0;
