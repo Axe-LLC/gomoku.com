@@ -125,6 +125,7 @@ $(document).ready(function(){
     
     $("#startGame").on('click', function(){
         $("#backdrop-over").show();
+        $("#undo-button").removeClass('disabled');
         $("#backdropgame-over").hide();
         $("#backdrop-topmenu").hide();
         $("#newGame").prop('disabled', false);
@@ -156,6 +157,7 @@ $(document).ready(function(){
 
     $("#mobileStartGame").on('click', function() {
         $('.controller').show();
+        $("#undo-button").removeClass('disabled');
         $('#game-setting').hide('normal');
         $('body').removeClass('overflow-hidden');
         $('#backdropgame-over').hide();
