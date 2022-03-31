@@ -1140,6 +1140,9 @@ button:focus, button:active {
 		justify-content: center;
 		align-items: center;
 		background: #F7FAFF;
+		font-size: 19px;
+		font-family: 'Gilroy_Bold';
+		color: #344861;
 	}
 	.player-status div.first span.tile {
 		width: 19px;
