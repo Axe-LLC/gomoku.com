@@ -3,10 +3,10 @@ function Place(r, c, board){
     var elm = this.elm = document.createElement("div");
     elm.className = "go-place";
     var s = elm.style;
-    s.top = r/gameData.boardsize*100+'%',
-    s.left = c/gameData.boardsize*100+'%',
-    s.right = 100-(c+1)/gameData.boardsize*100+'%',
-    s.bottom = 100-(r+1)/gameData.boardsize*100+'%',
+    s.top = r/15*100+'%',
+    s.left = c/15*100+'%',
+    s.right = 100-(c+1)/15*100+'%',
+    s.bottom = 100-(r+1)/15*100+'%',
     s.position = 'absolute';
     var inner = document.createElement("div");
     inner.className = "go";
@@ -64,9 +64,9 @@ Place.prototype.unwarns = function(){
 
 var Board = function(boardElm, backgroundElm){
     var frag = document.createDocumentFragment();
-    for(var i = 1; i < gameData.boardsize; i++){
+    for(var i = 1; i < 15; i++){
         var row = document.createElement("tr");
-        for(var j = 1; j < gameData.boardsize; j++){
+        for(var j = 1; j < 15; j++){
             row.appendChild(document.createElement("td"));
         }
         frag.appendChild(row);
@@ -96,15 +96,15 @@ var Board = function(boardElm, backgroundElm){
 
     var frag = document.createDocumentFragment();
 
-    for(var r = 0; r < gameData.boardsize; r++){
+    for(var r = 0; r < 15; r++){
         places.push([]);
-        for(var c = 0; c < gameData.boardsize; c++){
+        for(var c = 0; c < 15; c++){
             places[r].push(new Place(r, c, this));
             frag.appendChild(places[r][c].elm[0]);
         }
     }
 
-    switch( gameData.boardsize ) {
+    switch( 15 ) {
         case '9':
             [[5, 5],[3, 3], [3, 5], [5, 3], [4, 4]].forEach(function(e) {
                 places[e[0]][e[1]].elm.addClass("go-darkdot");
@@ -136,9 +136,9 @@ var Board = function(boardElm, backgroundElm){
             var tmp=[];
             for(var j=0;j<4;j++){
                 var tmpp=[];
-                for(var k=0;k<gameData.boardsize;k++){
+                for(var k=0;k<15;k++){
                     var tmpr=[];
-                    for(var l=0;l<gameData.boardsize;l++){
+                    for(var l=0;l<15;l++){
                         tmpr.push(1);
                     }
                     tmpp.push(tmpr);
@@ -199,7 +199,7 @@ var Board = function(boardElm, backgroundElm){
                 places[rr][cc].elm.css("opacity", 1);
                 rr += moves[dir][0] * i;
                 cc += moves[dir][1] * i;
-            }while(rr >= 0 && rr < gameData.boardsize && cc >= 0 && cc < gameData.boardsize && map[num][dir][rr][cc] == -num);
+            }while(rr >= 0 && rr < 15 && cc >= 0 && cc < 15 && map[num][dir][rr][cc] == -num);
         }
     };
 
@@ -278,14 +278,14 @@ var Board = function(boardElm, backgroundElm){
                             x += moves[i][0]*coe;
                             y += moves[i][1]*coe;
                             len++;
-                        }while(x >= 0 && y >= 0 && x < gameData.boardsize && y < gameData.boardsize && map[num][i][x][y] === -num);
-                        if(x >= 0 && y >= 0 && x < gameData.boardsize && y < gameData.boardsize && map[num][i][x][y]>0){
+                        }while(x >= 0 && y >= 0 && x < 15 && y < 15 && map[num][i][x][y] === -num);
+                        if(x >= 0 && y >= 0 && x < 15 && y < 15 && map[num][i][x][y]>0){
                             map[num][i][x][y] = len;
                             updateWarning(x,y,num,i);
                             map[num][i][r][c] += len - 1;
                             updateWarning(r,c,num,i);
                             var cont = 0, mx = x + moves[i][0] * coe, my = y + moves[i][1] * coe;
-                            while(mx >= 0 && my >= 0 && mx < gameData.boardsize && my < gameData.boardsize && map[num][i][mx][my] === -num){
+                            while(mx >= 0 && my >= 0 && mx < 15 && my < 15 && map[num][i][mx][my] === -num){
                                 cont++;
                                 mx += moves[i][0]*coe;
                                 my += moves[i][1]*coe;
@@ -306,11 +306,11 @@ var Board = function(boardElm, backgroundElm){
                 do{
                     x += moves[i][0] * coe;
                     y += moves[i][1] * coe;
-                }while(x >= 0 && y >= 0 && x < gameData.boardsize && y < gameData.boardsize && map[num][i][x][y] === -num);
-                if(x >= 0 && y >= 0 && x < gameData.boardsize && y < gameData.boardsize && map[num][i][x][y] > 0){
+                }while(x >= 0 && y >= 0 && x < 15 && y < 15 && map[num][i][x][y] === -num);
+                if(x >= 0 && y >= 0 && x < 15 && y < 15 && map[num][i][x][y] > 0){
                     map[num][i][x][y] = map[num][i][r][c]+1;
                     var cont = 0, mx = x + moves[i][0] * coe, my = y + moves[i][1] * coe;
-                    while(mx >= 0 && my >= 0 && mx < gameData.boardsize && my < gameData.boardsize && map[num][i][mx][my] === -num){
+                    while(mx >= 0 && my >= 0 && mx < 15 && my < 15 && map[num][i][mx][my] === -num){
                         cont++;
                         mx += moves[i][0] * coe;
                         my += moves[i][1] * coe;
@@ -324,7 +324,7 @@ var Board = function(boardElm, backgroundElm){
                 do{
                     x += moves[i][0] * coe;
                     y += moves[i][1] * coe;
-                }while(x >= 0 && y >= 0 && x < gameData.boardsize && y < gameData.boardsize && map[1-num][i][x][y] == num - 1);
+                }while(x >= 0 && y >= 0 && x < 15 && y < 15 && map[1-num][i][x][y] == num - 1);
             }
             for(var i = 0; i < 2; i++)for(var j = 0; j < 4; j++){
                 map[i][j][r][c] = -num;
