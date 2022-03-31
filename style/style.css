@@ -1031,6 +1031,7 @@ button:focus, button:active {
 	margin-left: 10px;
 }
 #undo-button.disabled { color: #8591A0; }
+.close-popup { display: none; }
 
 /* responsive */
 @media (min-width: 1600px) 
@@ -1163,5 +1164,15 @@ button:focus, button:active {
 		background: -moz-radial-gradient(closest-corner at 30% 25%, rgb(119, 119, 119), rgb(34, 34, 34));
 		background: radial-gradient(closest-corner at 30% 25%, rgb(119, 119, 119), rgb(34, 34, 34));
 		background: -webkit-radial-gradient(closest-corner at 30% 25%, rgb(119, 119, 119), rgb(34, 34, 34));
+	}
+	.close-popup {
+		display: inline-block;
+		padding: 5px;
+		position: absolute;
+		top: -40px;
+		right: 15px;
+		color: #344861;
+		font-size: 14px;
+		cursor: pointer;
 	}
 }

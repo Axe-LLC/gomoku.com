@@ -187,6 +187,10 @@ $(document).ready(function(){
         gameInit();
     });
 
+    $('.close-popup').on('click', function() {
+        $('#game-setting').hide('normal');
+    });
+
     $("#mobileNewGame").on('click', function() {
         $('#game-setting').show('normal');
         $('body').addClass('overflow-hidden');
