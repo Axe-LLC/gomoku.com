@@ -30,7 +30,7 @@ function adjustSizeGen(){
         }
 
         // if(vspace > hspace){
-        hsize = Math.min(~~((vspace - 15) / gameData.boardsize / 2), ~~((avaiw - 22) / gameData.boardsize / 2));
+        hsize = Math.min(~~((vspace - 15) / 15 / 2), ~~((avaiw - 22) / 15 / 2));
         if(smallScreen){
             gameRegion.css({
                 'padding': 30,
@@ -63,13 +63,13 @@ function adjustSizeGen(){
             });
         }
         // }else{
-        //     hsize = ~~((hspace - 15) / gameData.boardsize / 2);
+        //     hsize = ~~((hspace - 15) / 15 / 2);
         //     gameRegion.css({
         //         'padding': hsize+6,
-        //         'margin-left': -((2*hsize+1)*gameData.boardsize)/2,
+        //         'margin-left': -((2*hsize+1)*15)/2,
         //         'padding-left': 160+hsize,
         //         'padding-right': 160+hsize,
-        //         'margin-top': -(hsize * gameData.boardsize + 28)
+        //         'margin-top': -(hsize * 15 + 28)
         //     });
         //     tds.css('padding',hsize);
         //     board.css({
@@ -85,7 +85,7 @@ function adjustSizeGen(){
         $('#bottomLetters').html('');
         var letters = [' ', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T'];
 
-        for(i=1; i<=gameData.boardsize; i++) {
+        for(i=1; i<=15; i++) {
             $('#leftLetters').prepend('<span>' + i + '</span>');
             $('#rightLetters').prepend('<span>' + i + '</span>');
             $('#topLetters').append('<span>' + letters[i] + '</span>');
