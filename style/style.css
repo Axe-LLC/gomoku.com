@@ -736,6 +736,7 @@ ul, li {
 	transition: 0.3s all ease-in-out;
 }
 #game-setting .btn-group.mobile-show { display: none; }
+#anotherNewGame { cursor: pointer; }
 #game-setting .btn-group button.start-btn {
 	background: #0072E3;
 	color: white;
@@ -1022,7 +1023,14 @@ button:focus, button:active {
 	.container { width: 950px; }
 }
 @media (min-width: 768px) {
+	.container { width: 100%; }
+	.controller { min-width: unset; }
+	.new-game { width: 34%; }
+}
+@media (min-width: 950px) {
 	.container { width: 950px; }
+	.controller { min-width: 950px; }
+	.new-game { width: 320px; }
 }
 @media (max-width: 769px) {
 	.game-wrapper { 

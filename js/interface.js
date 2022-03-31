@@ -296,5 +296,7 @@ function showWinDialog(game){
 
 $(window).resize(function() {
     adjustSizeGen();
-    // var smallScreen = $(window).width()>768?false:true;
+    var smallScreen = $(window).width()>768?false:true;
+    if( smallScreen === false )
+        $('#game-setting').show();
 });
