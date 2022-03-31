@@ -193,6 +193,8 @@ var Board = function(boardElm, backgroundElm){
             }
         }
         $(".go-place").css("opacity", 0.5);
+        $(".go-place."+color).css("opacity", 1);
+        console.log(color);
         for(var i = -1; i < 2; i += 2){
             var rr = r, cc = c;
             do{
