@@ -1113,4 +1113,7 @@ button:focus, button:active {
 	#resultModal p br {
 		display: none;
 	}
+	#game-setting #backdrop-over {
+		display: none;
+	}
 }

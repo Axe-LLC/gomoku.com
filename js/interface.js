@@ -1,3 +1,5 @@
+var isStarted = false;
+
 $(document).ready(function(){
     let w = $('#game-page').width();
     let full = $(window).height() - 120;
@@ -6,6 +8,8 @@ $(document).ready(function(){
     else
         $('#game-page').height($('#game-page').width());
     $('#game-page').css('min-height', 'unset');
+
+    $('#newGame').width($('#backdrop-over').width());
 
     $("#backdrop-over").hide();
 
@@ -131,6 +135,7 @@ $(document).ready(function(){
         $("#backdropgame-over").hide();
         $("#backdrop-topmenu").hide();
         $("#newGame").prop('disabled', false);
+        isStarted = true;
         gameInit();
         game.start();
     });
@@ -140,6 +145,7 @@ $(document).ready(function(){
         $("#backdrop-topmenu").show();
         $("#backdropgame-over").show();
         $(this).prop('disabled', true);
+        isStarted = false;
         gameInit();
     });
 
@@ -148,12 +154,15 @@ $(document).ready(function(){
         $("#backdrop-topmenu").show();
         $("#backdropgame-over").show();
         $(this).prop('disabled', true);
+        isStarted = false;
         gameInit();
     });
 
     $("#mobileNewGame").on('click', function() {
         $('#game-setting').show('normal');
         $('body').addClass('overflow-hidden');
+        $("#backdropgame-over").show();
+        isStarted = false;
         gameInit();
     });
 
@@ -163,6 +172,9 @@ $(document).ready(function(){
         $('#game-setting').hide('normal');
         $('body').removeClass('overflow-hidden');
         $('#backdropgame-over').hide();
+        $("#backdrop-topmenu").hide();
+        $("#newGame").prop('disabled', false);
+        isStarted = true;
         gameInit();
         game.start();
     });
@@ -295,8 +307,25 @@ function showWinDialog(game){
 }
 
 $(window).resize(function() {
+    $('#newGame').width($('#backdrop-over').width());
     adjustSizeGen();
     var smallScreen = $(window).width()>768?false:true;
-    if( smallScreen === false )
+    if( smallScreen === false ) {
         $('#game-setting').show();
+        $('.controller').show();
+        if( isStarted === true ) {
+            $('#backdrop-over').show();
+        } else {
+            $('#backdrop-over').hide();
+            $('#backdrop-topmenu').show();
+        }
+    } else {
+        if( isStarted === false ) {
+            $('.controller').hide();
+        } else {
+            $('#game-setting').hide();
+        }
+        // $('#game-setting').hide();
+        $('#backdrop-over').hide();
+    }
 });
