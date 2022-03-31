@@ -735,7 +735,6 @@ ul, li {
 	opacity: 0.85;
 	transition: 0.3s all ease-in-out;
 }
-.mobile-show,
 #game-setting .btn-group.mobile-show { display: none; }
 #anotherNewGame { cursor: pointer; }
 #game-setting .btn-group button.start-btn {

@@ -18,7 +18,7 @@ $(document).ready(function(){
 
     adjustSize();
 
-    $('#newGame').width($('#backdrop-over').width());
+    $('#newGame').width($('#backdrop-over').width()-10);
 
     $("#backdrop-over").hide();
     $('.player-status').hide();
@@ -353,7 +353,7 @@ function showWinDialog(game){
 }
 
 $(window).resize(function() {
-    $('#newGame').width($('#backdrop-over').width());
+    $('#newGame').width($('#backdrop-over').width()-10);
     adjustSizeGen();
     var smallScreen = $(window).width()>768?false:true;
     if( smallScreen === false ) {
@@ -371,7 +371,7 @@ $(window).resize(function() {
             $('.controller').hide();
         } else {
             $('#game-setting').hide();
-            $('.player-status').show();
+            $('.player-status').css('display', 'flex');
         }
         // $('#game-setting').hide();
         $('#backdrop-over').hide();
