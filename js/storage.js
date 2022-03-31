@@ -1,11 +1,6 @@
-gameData={
+let gameData = {
     prefix: 'axe.gomoku.',
     records: {},
-    mode: 'vscomputer',
-    color: 'white',
-    level: 'medium',
-    boardsize: 15,
-    theme: 'classic',
     addRecord: function(name, defaultVal,applyFunc){
         this.records[name]=defaultVal;
         var func;
@@ -52,7 +47,7 @@ gameData.addRecord('level', 'medium', function(val){
     // $('#level-select input[type="radio"]').checkboxradio('refresh');
 });
 gameData.addRecord('boardsize', '15', function(val){
-    $('#mode-boardsize input[value="'+val+'"]').attr('checked',true);
+    // $('#mode-boardsize input[value="'+val+'"]').attr('checked',true);
     // $('#level-select input[type="radio"]').checkboxradio('refresh');
 });
 gameData.addRecord('theme', 'classic', function(val){
@@ -60,7 +55,7 @@ gameData.addRecord('theme', 'classic', function(val){
     // $('#level-select input[type="radio"]').checkboxradio('refresh');
 });
 
-gameData.load=function(){
+gameData.load = function() {
     if(!this.firstTime){
         this.ini();
     }

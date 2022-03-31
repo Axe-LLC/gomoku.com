@@ -106,6 +106,10 @@ $(document).ready(function(){
     }
 
     function gameInitSetting() {
+        if (typeof gameData.mode === 'undefined') gameData.mode = 'vscomputer';
+        if (typeof gameData.level === 'undefined') gameData.level = 'medium';
+        if (typeof gameData.color === 'undefined') gameData.color = 'white';
+        if (typeof gameData.theme === 'undefined') gameData.theme = 'classic';
         /* mode */
         $('#mode-select input[value="'+gameData.mode+'"]').attr('checked',true);
         $('#mode-select label').removeClass('selected');
