@@ -583,7 +583,7 @@ ul, li {
 	height: 100%;
 	position: absolute;
 	top: 0;
-	z-index: 99;
+	z-index: 999 !important;
 }
 #game-setting #backdrop-over p span {
 	color: #0072E3;
@@ -596,6 +596,9 @@ ul, li {
 #game-setting .btn-group input,
 #level-select input {
 	display: none;
+}
+.modal-backdrop {
+	z-index: 998;
 }
 #game-setting .btn-group {
 	display: flex;
