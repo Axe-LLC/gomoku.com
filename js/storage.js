@@ -38,7 +38,7 @@ gameData.addRecord('mode', 'vscomputer', function(val){
     $('#mode-select input[value="'+val+'"]').attr('checked',true);
     // $('#mode-select input[type="radio"]').checkboxradio('refresh');
 });
-gameData.addRecord('color', 'white', function(val){
+gameData.addRecord('color', 'black', function(val){
     $('#mode-player input[value="'+val+'"]').attr('checked',true);
     // $('#color-select input[type="radio"]').checkboxradio('refresh');
 });

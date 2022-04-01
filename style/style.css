@@ -182,6 +182,7 @@ table.board {
 	border-spacing: 0;
 	border-collapse: collapse;
 	color: transparent;
+	z-index: 20;
 }
 .go-darkdot::before {
 	content: ' ';
@@ -681,15 +682,15 @@ ul, li {
 	height: 12px;
 	margin-right: 7px;
 	border-radius: 50%;
-	background: -moz-radial-gradient(closest-corner at 30% 25%, rgb(119, 119, 119), rgb(34, 34, 34));
-	background: radial-gradient(closest-corner at 30% 25%, rgb(119, 119, 119), rgb(34, 34, 34));
-	background: -webkit-radial-gradient(closest-corner at 30% 25%, rgb(119, 119, 119), rgb(34, 34, 34));
-}
-#game-setting #mode-player label:first-of-type span {
-	/* background: #0072E3; */
 	background: -moz-radial-gradient(closest-corner at 30% 25%, rgb(238, 238, 238), rgb(187, 187, 187));
 	background: radial-gradient(closest-corner at 30% 25%, rgb(238, 238, 238), rgb(187, 187, 187));
 	background: -webkit-radial-gradient(closest-corner at 30% 25%, rgb(238, 238, 238), rgb(187, 187, 187));
+}
+#game-setting #mode-player label:first-of-type span {
+	/* background: #0072E3; */
+	background: -moz-radial-gradient(closest-corner at 30% 25%, rgb(119, 119, 119), rgb(34, 34, 34));
+	background: radial-gradient(closest-corner at 30% 25%, rgb(119, 119, 119), rgb(34, 34, 34));
+	background: -webkit-radial-gradient(closest-corner at 30% 25%, rgb(119, 119, 119), rgb(34, 34, 34));
 }
 /* #game-setting #mode-player label.selected span {
 	background: #0072E3;

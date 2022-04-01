@@ -6,6 +6,7 @@ function adjustSizeGen(){
         board = $('.go-board');
     return function(){
         var smallScreen = $(window).width()>768?false:true;
+        var mobileScreen = $(window).width()>500?false:true;
         var avaih = $('#game-page').height(),
             avaiw = $('#game-page').width(),
             h = Math.max(avaih - 40, avaih * 0.98 - 40),
@@ -27,6 +28,13 @@ function adjustSizeGen(){
             w = Math.max(avaiw, avaih * 0.98);
             vspace = Math.min(h, w);
             hspace = Math.min(w, h - 30);
+
+            if( mobileScreen ) {
+                h = Math.max(avaih, avaih * 0.98);
+                w = Math.max(avaiw, avaih * 0.98);
+                vspace = Math.min(h, w);
+                hspace = Math.min(w, h);
+            }
         }
 
         // if(vspace > hspace){
@@ -50,6 +58,28 @@ function adjustSizeGen(){
                 'top': 36 - hsize,
                 'bottom': 36 - hsize,
             });
+
+            if( mobileScreen ) {
+                gameRegion.css({
+                    'padding': 0,
+                });
+                if( $(window).width() > 370 && $(window).width() < 390 ) {
+                    tds.css('padding',hsize+0.85);
+                } else if( $(window).width() > 390 && $(window).width() < 401 ) {
+                    tds.css('padding',hsize+0.4);
+                } else if( $(window).width() > 400 && $(window).width() < 415 ) {
+                    tds.css('padding',hsize+1.2);
+                } else {
+                    tds.css('padding',hsize+1.4);
+                }
+                board.css({
+                    'left': 6 - hsize,
+                    'right': 6 - hsize,
+                    'top': 6 - hsize,
+                    'bottom': 6 - hsize,
+                });
+            }
+            
         } else {
             gameRegion.css({
                 'padding': 40,
@@ -83,6 +113,7 @@ function adjustSizeGen(){
         $('#rightLetters').html('');
         $('#topLetters').html('');
         $('#bottomLetters').html('');
+        if( mobileScreen ) return;
         var letters = [' ', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T'];
 
         for(i=1; i<=15; i++) {

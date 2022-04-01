@@ -6,7 +6,7 @@ function Game(boardElm, boardBackgroundElm){
         history = [],
         players = {},
         board = new Board(boardElm, boardBackgroundElm),
-        currentColor = "white";
+        currentColor = "black";
 
     board.clicked = function(r, c){
         var p = players[currentColor];
@@ -134,6 +134,6 @@ function Game(boardElm, boardBackgroundElm){
 
     this.start = function(){
         playing = true;
-        players.white.myTurn();
+        players.black.myTurn();
     };
 }

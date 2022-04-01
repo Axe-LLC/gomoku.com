@@ -108,7 +108,7 @@ $(document).ready(function(){
     function gameInitSetting() {
         if (typeof gameData.mode === 'undefined') gameData.mode = 'vscomputer';
         if (typeof gameData.level === 'undefined') gameData.level = 'medium';
-        if (typeof gameData.color === 'undefined') gameData.color = 'white';
+        if (typeof gameData.color === 'undefined') gameData.color = 'black';
         if (typeof gameData.theme === 'undefined') gameData.theme = 'classic';
         /* mode */
         $('#mode-select input[value="'+gameData.mode+'"]').attr('checked',true);
@@ -221,12 +221,6 @@ $(document).ready(function(){
     });
 
     $('.btn-closepopup').on('click', function() {
-        // gameInit();
-        // $("#backdrop-over").hide();
-        // $("#backdrop-topmenu").show();
-        // $("#backdropgame-over").show();
-        // $("#newGame").prop('disabled', true);
-
         var showText = 'You Lost';
         var isMobile = $(window).width()>768?false:true;
         if( isMobile ) {
@@ -254,7 +248,6 @@ $(document).ready(function(){
 
     $(".btn-playagain").on('click', function() {
         stopConfetti();
-        // gameInit();
         var isMobile = $(window).width()>768?false:true;
         if( isMobile ) {
             $("#mobileNewGame").trigger('click');

@@ -80,7 +80,7 @@ var Board = function(boardElm, backgroundElm){
     var clickable = true,
         places = [],
         map = [],
-        numToColor = ["white", "black"],
+        numToColor = ["black", "white"],
         colorToNum = (function(){
             var obj = {};
             numToColor.forEach(function(elm, ind){
@@ -194,9 +194,13 @@ var Board = function(boardElm, backgroundElm){
                 break;
             }
         }
-        $(".go-place").css("opacity", 0.5);
-        $(".go-place."+color).css("opacity", 1);
-        console.log(color);
+        if( color == 'black' ) {
+            $(".go-place.white").css("opacity", 0.5);
+            $(".go-place.black").css("opacity", 1);
+        } else {
+            $(".go-place.white").css("opacity", 1);
+            $(".go-place.black").css("opacity", 0.5);
+        }
         for(var i = -1; i < 2; i += 2){
             var rr = r, cc = c;
             do{
