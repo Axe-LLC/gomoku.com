@@ -64,8 +64,8 @@ ai.ini=function(mode,color){
             });
             }
         case 'novice':
-        this.depth=3;
-        this.totry=[30,30];
+        this.depth=1;
+        this.totry=[40,40];
         break;
         case 'medium':
         this.depth=5;
