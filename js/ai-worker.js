@@ -65,14 +65,14 @@ ai.ini=function(mode,color){
             }
         case 'novice':
         this.depth=1;
-        this.totry=[40,40];
+        this.totry=[45,45];
         break;
         case 'medium':
-        this.depth=5;
+        this.depth=2;
         this.totry=[12,8];
         break;
         case 'expert':
-        this.depth=7;
+        this.depth=5;
         this.totry=[10,10];
         break;
         default:
