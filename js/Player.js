@@ -5,12 +5,12 @@ function Player(color){
 
 Player.prototype.myTurn = function(){
     this.game.setCurrentColor(this.color);
-    let turnVal = 'White';
+    let turnVal = 'Player 2';
     if( this.color == 'black' )
-        turnVal = 'Black';
+        turnVal = 'Player 1';
     gameInfo.setText((function(string){
         return string.charAt(0).toUpperCase() + string.slice(1);
-    })(turnVal)+" Player Turn");
+    })(turnVal)+" Turn");
     gameInfo.setColor(this.color);
     gameInfo.setBlinking(false);
 };
