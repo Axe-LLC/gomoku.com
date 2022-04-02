@@ -37,7 +37,7 @@ function Game(boardElm, boardBackgroundElm){
             board.updateMap(r, c, color);
             black.watch(r, c, color);
             white.watch(r, c, color);
-            setTimeout(progress, 3000);
+            setTimeout(progress, 0);
         }
     };
 
