@@ -280,9 +280,9 @@ span.white-tile {
 	background: -moz-radial-gradient(top right, #fff, #ccc);
   	background: radial-gradient(to bottom left, #fff, #ccc);
 	background: -webkit-radial-gradient(top right, #fff, #ccc); */
-	background: -moz-radial-gradient(closest-corner at 30% 25%, rgb(238, 238, 238), rgb(187, 187, 187));
-	background: radial-gradient(closest-corner at 30% 25%, rgb(238, 238, 238), rgb(187, 187, 187));
-	background: -webkit-radial-gradient(closest-corner at 30% 25%, rgb(238, 238, 238), rgb(187, 187, 187));
+	background: -moz-radial-gradient(closest-corner at 30% 25%, rgb(255, 255, 255), rgb(197, 197, 197));
+	background: radial-gradient(closest-corner at 30% 25%, rgb(255, 255, 255), rgb(187, 187, 187));
+	background: -webkit-radial-gradient(closest-corner at 30% 25%, rgb(255, 255, 255), rgb(197, 197, 197));
 
 	-webkit-transform: scale(0.9);
 	-moz-transform: scale(0.9);
@@ -299,10 +299,10 @@ span.black-tile {
 	margin-top: 1px;
 }
 .go-board .go-place.black.last-move>.go {
-	box-shadow: rgb(255 255 255 / 30%) 0px -2px 15px inset, rgb(10 10 10 / 40%) -2px -1px 40px inset, rgb(0 0 0 / 50%) 0px 0px 2px, white 0px 0px 10px 3px;
+	/* box-shadow: rgb(255 255 255 / 30%) 0px -2px 15px inset, rgb(10 10 10 / 40%) -2px -1px 40px inset, rgb(0 0 0 / 50%) 0px 0px 2px, white 0px 0px 10px 3px; */
 }
 .go-board .go-place.white.last-move>.go {
-	box-shadow: rgb(255 255 255 / 30%) 0px -2px 15px inset, rgb(10 10 10 / 25%) -2px -1px 40px inset, rgb(0 0 0 / 20%) 0px 0px 2px, white 0px 0px 10px 3px;
+	/* box-shadow: rgb(255 255 255 / 30%) 0px -2px 15px inset, rgb(255 255 255 / 25%) -2px -1px 40px inset, rgb(0 0 0 / 20%) 0px 0px 2px, white 0px 0px 10px 3px; */
 }
 .go-board .go-place.set>.go { top: 0; }
 .go-board.playing .go-place:not(.set):hover>.go {
