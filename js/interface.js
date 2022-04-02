@@ -35,31 +35,31 @@ $(document).ready(function(){
             $('#level-select label').addClass('disabled');
             $('#pc-icon').removeClass('blue');
             $('#user-icon').addClass('blue');
-            $('.player-status').find('.pc-large-ico').removeClass('pc-large-ico').addClass('user-large-ico');
+            // $('.player-status').find('.pc-large-ico').removeClass('pc-large-ico').addClass('user-large-ico');
         } else {
             $('#level-select input').attr('disabled', false);
             $('#level-select label').removeClass('disabled');
             $('#pc-icon').addClass('blue');
             $('#user-icon').removeClass('blue');
-            if( gameData.color == 'white' ) {
-                $('.player-status .first').find('.pc-large-ico').removeClass('pc-large-ico').addClass('user-large-ico');
-                $('.player-status .second').find('.user-large-ico').removeClass('user-large-ico').addClass('pc-large-ico');
-            } else {
-                $('.player-status .second').find('.pc-large-ico').removeClass('pc-large-ico').addClass('user-large-ico');
-                $('.player-status .first').find('.user-large-ico').removeClass('user-large-ico').addClass('pc-large-ico');
-            }
+            // if( gameData.color == 'white' ) {
+            //     $('.player-status .first').find('.pc-large-ico').removeClass('pc-large-ico').addClass('user-large-ico');
+            //     $('.player-status .second').find('.user-large-ico').removeClass('user-large-ico').addClass('pc-large-ico');
+            // } else {
+            //     $('.player-status .second').find('.pc-large-ico').removeClass('pc-large-ico').addClass('user-large-ico');
+            //     $('.player-status .first').find('.user-large-ico').removeClass('user-large-ico').addClass('pc-large-ico');
+            // }
         }
     });
     
     $('#mode-player input[type="radio"]').on('click', function(){
         gameData.color=$(this).val();
-        if( gameData.color == 'white' ) {
-            $('.player-status .first').find('.pc-large-ico').removeClass('pc-large-ico').addClass('user-large-ico');
-            $('.player-status .second').find('.user-large-ico').removeClass('user-large-ico').addClass('pc-large-ico');
-        } else {
-            $('.player-status .second').find('.pc-large-ico').removeClass('pc-large-ico').addClass('user-large-ico');
-            $('.player-status .first').find('.user-large-ico').removeClass('user-large-ico').addClass('pc-large-ico');
-        }
+        // if( gameData.color == 'white' ) {
+        //     $('.player-status .first').find('.pc-large-ico').removeClass('pc-large-ico').addClass('user-large-ico');
+        //     $('.player-status .second').find('.user-large-ico').removeClass('user-large-ico').addClass('pc-large-ico');
+        // } else {
+        //     $('.player-status .second').find('.pc-large-ico').removeClass('pc-large-ico').addClass('user-large-ico');
+        //     $('.player-status .first').find('.user-large-ico').removeClass('user-large-ico').addClass('pc-large-ico');
+        // }
     });
     
     $('#level-select input[type="radio"]').on('change', function(){
@@ -147,18 +147,18 @@ $(document).ready(function(){
 
         $('#main-page').attr('class', 'theme-' + gameData.theme);
 
-        if( gameData.mode == 'vshuman' ) {
-            $('.player-status .first').prepend('<span class="user-large-ico"></span>');
-            $('.player-status .second').prepend('<span class="user-large-ico"></span>');
-        } else {
-            if(gameData.color=='white') {
-                $('.player-status .first').prepend('<span class="user-large-ico"></span>');
-                $('.player-status .second').prepend('<span class="pc-large-ico"></span>');
-            } else {
-                $('.player-status .first').prepend('<span class="pc-large-ico"></span>');
-                $('.player-status .second').prepend('<span class="user-large-ico"></span>');
-            }
-        }
+        // if( gameData.mode == 'vshuman' ) {
+        //     $('.player-status .first').prepend('<span class="user-large-ico"></span>');
+        //     $('.player-status .second').prepend('<span class="user-large-ico"></span>');
+        // } else {
+        //     if(gameData.color=='white') {
+        //         $('.player-status .first').prepend('<span class="user-large-ico"></span>');
+        //         $('.player-status .second').prepend('<span class="pc-large-ico"></span>');
+        //     } else {
+        //         $('.player-status .first').prepend('<span class="pc-large-ico"></span>');
+        //         $('.player-status .second').prepend('<span class="user-large-ico"></span>');
+        //     }
+        // }
     }
     gameInitSetting();
     
@@ -182,6 +182,7 @@ $(document).ready(function(){
         $("#backdropgame-over").show();
         $("#secondLoading").hide();
         $("#firstLoading").show();
+        $('#endLoading').hide();
         $(this).prop('disabled', true);
         isStarted = false;
         gameInit();

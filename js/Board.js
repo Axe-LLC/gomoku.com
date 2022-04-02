@@ -53,6 +53,7 @@ Place.prototype.unset = function(){
 Place.prototype.highlight = function(){
     $("#firstLoading").hide();
     $("#secondLoading").show();
+    $('#endLoading').hide();
     this.elm.addClass("last-move");
 };
 

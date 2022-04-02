@@ -64,6 +64,9 @@ function Game(boardElm, boardBackgroundElm){
         if(result === "draw"){
             this.draw();
         }else if(result === "win"){
+            $("#firstLoading").hide();
+            $("#secondLoading").hide();
+            $('#endLoading').show();
             this.win();
             board.winChange(r, c, color);
         }else{
