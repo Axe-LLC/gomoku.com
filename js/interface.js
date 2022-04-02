@@ -181,8 +181,8 @@ $(document).ready(function(){
         $("#backdrop-topmenu").show();
         $("#backdropgame-over").show();
         $("#secondLoading").hide();
-        $("#firstLoading").show();
         $('#endLoading').hide();
+        $("#firstLoading").show();
         $(this).prop('disabled', true);
         isStarted = false;
         gameInit();

@@ -298,6 +298,7 @@ span.black-tile {
 	margin-left: 10px;
 	margin-top: 1px;
 }
+#endLoading { display: none; }
 .go-board .go-place.black.last-move>.go {
 	/* box-shadow: rgb(255 255 255 / 30%) 0px -2px 15px inset, rgb(10 10 10 / 40%) -2px -1px 40px inset, rgb(0 0 0 / 50%) 0px 0px 2px, white 0px 0px 10px 3px; */
 }
