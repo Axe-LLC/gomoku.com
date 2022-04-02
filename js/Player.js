@@ -79,13 +79,17 @@ function AIPlayer(mode, color, game){
 AIPlayer.prototype = new Player();
 
 AIPlayer.prototype.myTurn = function(){
-    // setTimeout( () =>{
-        Player.prototype.myTurn.call(this);
-        this.game.toOthers();
-        gameInfo.setText("Thinking...<img src='images/thinking.png' width='30px'>");
+    Player.prototype.myTurn.call(this);
+    this.game.toOthers();
+    gameInfo.setText("Thinking...<img src='images/thinking.png' width='30px'>");
+    console.log(this.game.mode)
+    var delayTime = 2000;
+    if( this.game.mode == 'expert' ) delayTime = 500;
+    else if( this.game.mode == 'medium' ) delayTime = 1000;
+    setTimeout( () =>{
         gameInfo.setBlinking(true);
         this.move();
-    // }, 3000);
+    }, delayTime);
 };
 
 AIPlayer.prototype.watch = function(r, c, color){
