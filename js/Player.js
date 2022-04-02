@@ -27,7 +27,11 @@ function HumanPlayer(color, game){
 
 HumanPlayer.prototype = new Player();
 
-HumanPlayer.prototype.myTurn = function(){
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+HumanPlayer.prototype.myTurn = function(){    
     Player.prototype.myTurn.call(this);
     this.game.toHuman(this.color);
     if(this.other instanceof AIPlayer){
@@ -75,11 +79,13 @@ function AIPlayer(mode, color, game){
 AIPlayer.prototype = new Player();
 
 AIPlayer.prototype.myTurn = function(){
-    Player.prototype.myTurn.call(this);
-    this.game.toOthers();
-    gameInfo.setText("Thinking...<img src='images/thinking.png' width='30px'>");
-    gameInfo.setBlinking(true);
-    this.move();
+    setTimeout( () =>{
+        Player.prototype.myTurn.call(this);
+        this.game.toOthers();
+        gameInfo.setText("Thinking...<img src='images/thinking.png' width='30px'>");
+        gameInfo.setBlinking(true);
+        this.move();
+    }, 3000);
 };
 
 AIPlayer.prototype.watch = function(r, c, color){

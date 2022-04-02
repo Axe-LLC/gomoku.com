@@ -194,13 +194,6 @@ var Board = function(boardElm, backgroundElm){
                 break;
             }
         }
-        // if( color == 'black' ) {
-        //     $(".go-place.white").css("opacity", 0.5);
-        //     $(".go-place.black").css("opacity", 1);
-        // } else {
-        //     $(".go-place.white").css("opacity", 1);
-        //     $(".go-place.black").css("opacity", 0.5);
-        // }
         $(".go-place").css("opacity", 0.5);
         for(var i = -1; i < 2; i += 2){
             var rr = r, cc = c;
