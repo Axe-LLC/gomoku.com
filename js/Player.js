@@ -79,13 +79,13 @@ function AIPlayer(mode, color, game){
 AIPlayer.prototype = new Player();
 
 AIPlayer.prototype.myTurn = function(){
-    setTimeout( () =>{
+    // setTimeout( () =>{
         Player.prototype.myTurn.call(this);
         this.game.toOthers();
         gameInfo.setText("Thinking...<img src='images/thinking.png' width='30px'>");
         gameInfo.setBlinking(true);
         this.move();
-    }, 3000);
+    // }, 3000);
 };
 
 AIPlayer.prototype.watch = function(r, c, color){
