@@ -172,6 +172,9 @@ $(document).ready(function(){
         gameInit();
         game.start();
     });
+    $('#startGame embed').on('click', function() {
+        $("#startGame").trigger('click');
+    });
 
     $("#newGame").on('click', function(){
         $("#backdrop-over").hide();
