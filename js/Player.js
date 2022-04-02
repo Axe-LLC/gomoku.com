@@ -35,12 +35,11 @@ HumanPlayer.prototype.myTurn = function(){
     }
 };
 
-function AIPlayer(mode, color, bsize, game){
+function AIPlayer(mode, color, game){
     Player.call(this, color, game);
     this.computing = false;
     this.cancel = 0;
     this.mode = mode;
-    this.bsize = bsize;
     this.worker = new Worker('./js/ai-worker.js');
     var self=this;
     this.worker.onmessage=function(e){
