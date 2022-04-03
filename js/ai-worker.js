@@ -68,11 +68,11 @@ ai.ini=function(mode,color){
         this.totry=[45,45];
         break;
         case 'medium':
-        this.depth=2;
+        this.depth=3;
         this.totry=[12,8];
         break;
         case 'expert':
-        this.depth=4;
+        this.depth=5;
         this.totry=[10,10];
         break;
         default:
