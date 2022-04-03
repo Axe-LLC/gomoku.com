@@ -1,3 +1,4 @@
+var tileCount = 0;
 function Game(boardElm, boardBackgroundElm){
     this.mode = "hvh";
     this.rounds = 0;
@@ -42,6 +43,17 @@ function Game(boardElm, boardBackgroundElm){
     };
 
     function progress(){
+        tileCount++;
+        if( tileCount > 224 ) {
+            $("#firstLoading").hide();
+            $("#secondLoading").hide();
+            $('#endLoading').show();
+            $('#stalemateModal').modal({
+                backdrop: 'static',
+                keyboard: false
+            });
+            tileCount = 0;
+        }
         if(currentColor === 'black'){
             white.myTurn();
         }else{

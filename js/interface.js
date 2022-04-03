@@ -7,6 +7,7 @@ $(document).ready(function(){
         $('#game-page').height(full);
     else
         $('#game-page').height($('#game-page').width());
+    
     $('#game-page').css('min-height', 'unset');
 
     var game = new Game($(".go-board"), $(".board tbody"));

@@ -939,12 +939,12 @@ ul, li {
 	background: white;
 }
 /* modal */
-#resultModal .modal-dialog {
+.openModal .modal-dialog {
 	width: 430px;
 	text-align: center;
 	margin: 15% auto;
 }
-#resultModal h2 {
+.openModal h2 {
 	color: #14142B;
 	font-size: 20px;
 	font-family: 'Gilroy_Bold';
@@ -953,7 +953,7 @@ ul, li {
 	align-items: center;
 	margin-top: 10px;
 }
-#resultModal p {
+.openModal p {
 	color: #8591A0;
 	font-size: 14px;
 	line-height: 2;
@@ -961,10 +961,10 @@ ul, li {
 	margin-bottom: 30px;
 	font-family: 'Gilroy_Medium';
 }
-#resultModal .modal-body {
+.openModal .modal-body {
 	padding: 25px 35px;
 }
-#resultModal .modal-content {
+.openModal .modal-content {
 	border-radius: 10px;
 	z-index: 100;
 }

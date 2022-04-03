@@ -325,13 +325,27 @@
 	</div>
 	<!-- privacy page end -->
 </div>
-<!-- Modal -->
-<div class="modal fade" id="resultModal" tabindex="-1" role="dialog">
+<!-- Win Modal -->
+<div class="modal fade openModal" id="resultModal" tabindex="-1" role="dialog">
 	<div class="modal-dialog" role="document">
 	  <div class="modal-content">
 		<div class="modal-body">
 		  	<h2 id="winTitle"> </h2>
 		  	<p id="winContent"> </p>
+			<button type="button" class="btn-playagain" data-dismiss="modal">Start a New Game</button> <br />
+			<button type="button" class="btn-closepopup" data-dismiss="modal">Close Popup</button>
+		</div>
+	  </div>
+	</div>
+</div>
+
+<!-- Stalemate Modal -->
+<div class="modal fade openModal" id="stalemateModal" tabindex="-1" role="dialog">
+	<div class="modal-dialog" role="document">
+	  <div class="modal-content">
+		<div class="modal-body">
+		  	<h2>Stalemate</h2>
+		  	<p>Your game has ended in a stalemate. We’ll call it a tie. Click the button below to give it another try. Good luck!</p>
 			<button type="button" class="btn-playagain" data-dismiss="modal">Start a New Game</button> <br />
 			<button type="button" class="btn-closepopup" data-dismiss="modal">Close Popup</button>
 		</div>
