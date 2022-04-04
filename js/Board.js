@@ -195,11 +195,11 @@ var Board = function(boardElm, backgroundElm){
                 break;
             }
         }
-        $(".go-place").css("opacity", 0.5);
+        // $(".go-place").css("opacity", 0.5);
         for(var i = -1; i < 2; i += 2){
             var rr = r, cc = c;
             do{
-                places[rr][cc].elm.css("opacity", 1);
+                // places[rr][cc].elm.css("opacity", 1);
                 rr += moves[dir][0] * i;
                 cc += moves[dir][1] * i;
             }while(rr >= 0 && rr < 15 && cc >= 0 && cc < 15 && map[num][dir][rr][cc] == -num);

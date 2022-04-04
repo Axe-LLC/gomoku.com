@@ -311,11 +311,11 @@ span.black-tile {
 .go-board .go-place.last-move>.go::before {
 	content: '';
 	position: absolute;
-	width: 36%;
-	height: 36%;
+	width: 30%;
+	height: 30%;
 	background: url('images/red_dot_most.png') center center;
-	left: 32%;
-	top: 32%;
+	left: 35%;
+	top: 35%;
 	background-size: contain;
 }
 .go-board .go-place.set>.go { top: 0; }
