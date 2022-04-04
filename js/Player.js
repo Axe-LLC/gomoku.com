@@ -83,7 +83,7 @@ AIPlayer.prototype.myTurn = function(){
     this.game.toOthers();
     gameInfo.setText("<span class='blinking'>Thinking...<img src='images/thinking.png' width='30px'></span>");
     console.log(this.game.mode)
-    var delayTime = 1600;
+    var delayTime = 1000;
     // if( this.game.mode == 'expert' ) delayTime = 700;
     // else if( this.game.mode == 'medium' ) delayTime = 1800;
     setTimeout( () =>{
